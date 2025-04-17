@@ -128,7 +128,9 @@ body.dark-theme {
 
 .dropdown__item:hover {
   background-color: var(--first-color-light);
+  color: var(--first-color); /* 👈 Thêm dòng này */
 }
+
 
 /* Show dropdown on hover */
 .nav__dropdown:hover .dropdown__menu {
