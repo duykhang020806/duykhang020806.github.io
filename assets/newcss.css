@@ -99,6 +99,49 @@ body.dark-theme {
   color: var(--first-color);
 }
 
+/*============== Drop Menu =============*/
+/* Dropdown menu styles */
+.nav__dropdown {
+  position: relative;
+}
+
+.dropdown__menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--container-color);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  padding: 0.5rem 0;
+  border-radius: 0.5rem;
+  display: none;
+  z-index: 100;
+  min-width: 180px;
+}
+
+.dropdown__item {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: var(--title-color);
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.dropdown__item:hover {
+  background-color: var(--first-color-light);
+}
+
+/* Show dropdown on hover */
+.nav__dropdown:hover .dropdown__menu {
+  display: block;
+}
+
+/* Optional: Style the arrow icon if used */
+.dropdown__arrow {
+  margin-left: 0.3rem;
+}
+
+
+
 /*================= Base ===============*/
 * {
   box-sizing: border-box;
