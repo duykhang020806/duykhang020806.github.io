@@ -7,7 +7,7 @@ class Keyboard {
         this.display    = display;
         this.scores     = scores;
 
-        // Thêm biến để kiểm tra thời gian giữa các lần nhấn
+        this.speed = 1; // Tốc độ di chuyển mặc định = 1
         this.lastPressedTime = 0;
         this.moveDelay = 150; // Thời gian delay (ms) giữa các lần di chuyển
 
@@ -79,9 +79,22 @@ class Keyboard {
             if (number !== null) {
                 this.shortcuts.number(number);
             }
-            if (this.shortcuts[this.display.get()][key]) {
+
+            // Giảm tốc độ di chuyển tại đây (tốc độ = 0.5 nếu bạn muốn di chuyển chậm hơn)
+            if (this.speed === 1) {
+                // Tốc độ di chuyển nhanh
+                this.shortcuts[this.display.get()][key]();
+            } else if (this.speed === 0.5) {
+                // Tốc độ di chuyển chậm hơn
                 this.shortcuts[this.display.get()][key]();
             }
+        }
+    }
+
+    // Phương thức để điều chỉnh tốc độ di chuyển
+    setSpeed(speed) {
+        if (speed === 0.5 || speed === 1) {
+            this.speed = speed; // Thay đổi tốc độ
         }
     }
 }
