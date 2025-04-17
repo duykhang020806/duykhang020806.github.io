@@ -1,42 +1,35 @@
 class Keyboard {
-    /**
-     * The Game Keyboard constructor
-     * @param {Display} display
-     * @param {Scores}  scores
-     * @param {Object}  shortcuts
-     */
     constructor(display, scores, shortcuts) {
-        this.fastKeys   = [ 37, 65, 40, 83, 39, 68 ]; // Mã phím để di chuyển
+        this.fastKeys   = [ 37, 65, 40, 83, 39, 68 ]; // Mã phím di chuyển
         this.shortcuts  = shortcuts;
         this.keyPressed = null;
         this.count      = 0;
         this.display    = display;
         this.scores     = scores;
-        
+
+        // Thêm biến để kiểm tra thời gian giữa các lần nhấn
+        this.lastPressedTime = 0;
+        this.moveDelay = 150; // Thời gian delay (ms) giữa các lần di chuyển
+
         document.addEventListener("keydown", (e) => this.onKeyDown(e));
         document.addEventListener("keyup",   (e) => this.onKeyUp(e));
     }
 
-    /**
-     * Key handler for the on key down event
-     * @param {Event} event
-     */
     onKeyDown(event) {
-        // Chỉ xử lý khi phím được nhấn lần đầu
-        if (this.display.isPlaying() && this.fastKeys.indexOf(event.keyCode) > -1) {
-            if (this.keyPressed === null) {
-                this.keyPressed = event.keyCode;
-                this.pressKey(this.keyPressed, event);  // Gọi hàm để di chuyển ngay khi nhấn phím
-            } else {
-                return;
+        let currentTime = Date.now();
+        
+        // Kiểm tra xem thời gian giữa các lần nhấn có đủ lâu không (so với moveDelay)
+        if (currentTime - this.lastPressedTime > this.moveDelay) {
+            this.lastPressedTime = currentTime; // Cập nhật thời gian nhấn lần này
+            if (this.display.isPlaying() && this.fastKeys.indexOf(event.keyCode) > -1) {
+                if (this.keyPressed === null) {
+                    this.keyPressed = event.keyCode;
+                    this.pressKey(this.keyPressed, event); // Di chuyển khối
+                }
             }
         }
     }
 
-    /**
-     * Key handler for the on key up event
-     * @param {Event} event
-     */
     onKeyUp(event) {
         // Đặt lại trạng thái khi phím được nhả ra
         if (this.keyPressed === event.keyCode) {
@@ -44,11 +37,6 @@ class Keyboard {
         }
     }
 
-    /**
-     * Key Press Event
-     * @param {number} key
-     * @param {?Event} event
-     */
     pressKey(key, event) {
         let number = null;
         if (this.scores.isFocused()) {
