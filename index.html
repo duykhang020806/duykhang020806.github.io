@@ -1,899 +1,886 @@
-<!DOCTYPE html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="assets/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/newcss.css" />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
+    />
+  </head>
 
+  <body oncontextmenu="return false">
+    <header class="header" id="header">
+      <nav class="nav container">
+        <a href="#" class="nav__logo">Venkatesh</a>
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list grid">
+            <li class="nav__item">
+              <a href="#home" class="nav__link active-link">
+                <i class="uil uil-estate nav__icon"></i>Home
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#about" class="nav__link">
+                <i class="uil uil-user nav__icon"></i>About
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#skills" class="nav__link">
+                <i class="uil uil-file-alt nav__icon"></i>Skills
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#qualification" class="nav__link">
+                <i class="uil uil-briefcase-alt nav__icon"></i>Qualification
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#portfolio" class="nav__link">
+                <i class="uil uil-scenery nav__icon"></i>Projects
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#contact" class="nav__link">
+                <i class="uil uil-message nav__icon"></i>Contact-Me
+              </a>
+            </li>
+          </ul>
+          <i class="uil uil-times nav__close" id="nav-close"></i>
+        </div>
+        <div class="nav__btns">
+          <!-- Theme change button -->
+          <i class="uil uil-moon change-theme" id="theme-button"></i>
 
-<html lang="vi">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content=
-  "width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <link href=
-  "https://mtpentertainment.com/wp-content/themes/v-theme/images/favicon.png"
-  rel="shortcut icon" type="image/x-icon">
-  <title>M-TP ENTERTAINMENT</title>
-  <link rel='dns-prefetch' href='//s.w.org'>
-  <link rel="alternate" type="application/rss+xml" title=
-  "M-TP ENTERTAINMENT » Feed" href=
-  "https://mtpentertainment.com/feed/">
-  <link rel="alternate" type="application/rss+xml" title=
-  "M-TP ENTERTAINMENT » Comments Feed" href=
-  "https://mtpentertainment.com/comments/feed/">
-  <script type="text/javascript">
-                        window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11.2.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11.2.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/mtpentertainment.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.1.19"}};
-                        !function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])?!1:!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([55358,56760,9792,65039],[55358,56760,8203,9792,65039])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
-  </script>
-  <style type="text/css">
-  img.wp-smiley,
-  img.emoji {
-        display: inline !important;
-        border: none !important;
-        box-shadow: none !important;
-        height: 1em !important;
-        width: 1em !important;
-        margin: 0 .07em !important;
-        vertical-align: -0.1em !important;
-        background: none !important;
-        padding: 0 !important;
-  }
-  </style>
-  <link rel='stylesheet' id='wp-block-library-css' href=
-  'https://mtpentertainment.com/wp-includes/css/dist/block-library/style.min.css?ver=5.1.19'
-  type='text/css' media='all'>
-  <link rel='stylesheet' id='contact-form-7-css' href=
-  'https://mtpentertainment.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.1.3'
-  type='text/css' media='all'>
-  <link rel='stylesheet' id='rs-plugin-settings-css' href=
-  'https://mtpentertainment.com/wp-content/plugins/revslider/public/assets/css/settings.css?ver=5.4.8.2'
-  type='text/css' media='all'>
-  <style id='rs-plugin-settings-inline-css' type='text/css'>
-  #rs-demo-id {}
-  </style>
-  <link rel='stylesheet' id='wp-pagenavi-css' href=
-  'https://mtpentertainment.com/wp-content/plugins/wp-pagenavi/pagenavi-css.css?ver=2.70'
-  type='text/css' media='all'>
-  <link rel='stylesheet' id='bootstrap-css' href=
-  'https://mtpentertainment.com/wp-content/themes/v-theme/css/bootstrap.min.css?ver=4.0'
-  type='text/css' media='all'>
-  <link rel='stylesheet' id='slick-style-css' href=
-  'https://mtpentertainment.com/wp-content/themes/v-theme/css/slick.min.css?ver=1.6.0'
-  type='text/css' media='all'>
-  <link rel='stylesheet' id='fontawesome-css' href=
-  'https://mtpentertainment.com/wp-content/themes/v-theme/css/all.css?ver=5.0'
-  type='text/css' media='all'>
-  <link rel='stylesheet' id='fancybox-css' href=
-  'https://mtpentertainment.com/wp-content/themes/v-theme/css/jquery.fancybox.min.css?ver=2.1.5'
-  type='text/css' media='all'>
-  <link rel='stylesheet' id='style-css' href=
-  'https://mtpentertainment.com/wp-content/themes/v-theme/style.css?ver=5.1.19'
-  type='text/css' media='all'>
-  <link rel='stylesheet' id='js_composer_front-css' href=
-  'https://mtpentertainment.com/wp-content/plugins/js_composer/assets/css/js_composer.min.css?ver=5.7'
-  type='text/css' media='all'>
-  <script type="text/javascript">
-  (function(a,d){if(a._nsl===d){a._nsl=[];var c=function(){if(a.jQuery===d)setTimeout(c,33);else{for(var b=0;b<a._nsl.length;b++)a._nsl[b].call(a,a.jQuery);a._nsl={push:function(b){b.call(a,a.jQuery)}}}};c()}})(window);
-  </script>
-  <script type='text/javascript' src=
-  'https://mtpentertainment.com/wp-content/themes/v-theme/js/jquery.js?ver=5.1.19'></script>
-  <script type='text/javascript' src=
-  'https://mtpentertainment.com/wp-content/plugins/revslider/public/assets/js/jquery.themepunch.tools.min.js?ver=5.4.8.2'></script>
-  <script type='text/javascript' src=
-  'https://mtpentertainment.com/wp-content/plugins/revslider/public/assets/js/jquery.themepunch.revolution.min.js?ver=5.4.8.2'></script>
-  <link rel='https://api.w.org/' href=
-  'https://mtpentertainment.com/wp-json/'>
-  <link rel="EditURI" type="application/rsd+xml" title="RSD" href=
-  "https://mtpentertainment.com/xmlrpc.php?rsd">
-  <link rel="wlwmanifest" type="application/wlwmanifest+xml" href=
-  "https://mtpentertainment.com/wp-includes/wlwmanifest.xml">
-  <meta name="generator" content="WordPress 5.1.19">
-  <link rel="canonical" href="https://mtpentertainment.com/">
-  <link rel='shortlink' href='https://mtpentertainment.com/'>
-  <link rel="alternate" type="application/json+oembed" href=
-  "https://mtpentertainment.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fmtpentertainment.com%2F">
-  <link rel="alternate" type="text/xml+oembed" href=
-  "https://mtpentertainment.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fmtpentertainment.com%2F&amp;format=xml">
-
-  <script async src=
-  "https://www.googletagmanager.com/gtag/js?id=UA-138142679-1"></script>
-  <script>
-                        window.dataLayer = window.dataLayer || [];
-                        function gtag(){dataLayer.push(arguments);}
-                        gtag('js', new Date());
-                        gtag('config', 'UA-138142679-1');
-  </script>
-  <meta name="generator" content=
-  "Powered by WPBakery Page Builder - drag and drop page builder for WordPress.">
-  <!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="https://mtpentertainment.com/wp-content/plugins/js_composer/assets/css/vc_lte_ie9.min.css" media="screen"><![endif]-->
-  <meta name="generator" content=
-  "Powered by Slider Revolution 5.4.8.2 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface.">
-
-  <script type="text/javascript">
-  function setREVStartSize(e){                                                                     
-                                                try{ e.c=jQuery(e.c);var i=jQuery(window).width(),t=9999,r=0,n=0,l=0,f=0,s=0,h=0;
-                                                        if(e.responsiveLevels&&(jQuery.each(e.responsiveLevels,function(e,f){f>i&&(t=r=f,l=e),i>f&&f>r&&(r=f,n=e)}),t>r&&(l=n)),f=e.gridheight[l]||e.gridheight[0]||e.gridheight,s=e.gridwidth[l]||e.gridwidth[0]||e.gridwidth,h=i/s,h=h>1?1:h,f=Math.round(h*f),"fullscreen"==e.sliderLayout){var u=(e.c.width(),jQuery(window).height());if(void 0!=e.fullScreenOffsetContainer){var c=e.fullScreenOffsetContainer.split(",");if (c) jQuery.each(c,function(e,i){u=jQuery(i).length>0?u-jQuery(i).outerHeight(!0):u}),e.fullScreenOffset.split("%").length>1&&void 0!=e.fullScreenOffset&&e.fullScreenOffset.length>0?u-=jQuery(window).height()*parseInt(e.fullScreenOffset,0)/100:void 0!=e.fullScreenOffset&&e.fullScreenOffset.length>0&&(u-=parseInt(e.fullScreenOffset,0))}f=u}else void 0!=e.minHeight&&f<e.minHeight&&(f=e.minHeight);e.c.closest(".rev_slider_wrapper").css({height:f})                                      
-                                                }catch(d){console.log("Failure at Presize of Slider:"+d)}                                               
-                                        };
-  </script><noscript>
-  <style type="text/css">
-  .wpb_animate_when_almost_visible { opacity: 1; }
-  </style></noscript>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-
-  <script async src=""></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-138142679-1');
-  </script>
-</head>
-<body class=
-"home page-template-default page page-id-1411 visualcomposerstarter header-area-disabled wpb-js-composer js-comp-ver-5.7 vc_responsive">
-  <header id="header">
-    <div class="container">
-      <div class="header-inner">
-        <nav class="navbar navbar-expand-lg">
-          <div id="logo">
-            <a href="https://mtpentertainment.com"><img src=
-            "https://mtpentertainment.com/wp-content/themes/v-theme/images/logo.png"
-            alt="Logo" class="d-none d-lg-block"> <img src=
-            "https://mtpentertainment.com/wp-content/themes/v-theme/images/logo_mobile.png"
-            alt="Logo" class="d-block d-lg-none d-xl-none"></a>
+          <div class="nav__toggle" id="nav-toggle">
+            <i class="uil uil-apps"></i>
           </div>
-          <div class=
-          "primary-menu navbar-collapse offcanvas-collapse" id="">
-            <ul id="menu-header-menu" class="dropdown menu">
-              <li id="menu-item-1418" class=
-              "menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1418">
-                <a href=
-                "https://mtpentertainment.com/artist/">ARTIST</a>
-                <ul class="menu">
-                  <li id="menu-item-1421" class=
-                  "menu-item menu-item-type-post_type menu-item-object-page menu-item-1421">
-                    <a href=
-                    "https://mtpentertainment.com/contact/">Booking</a>
-                  </li>
-                </ul>
-              </li>
-              <li id="menu-item-1420" class=
-              "menu-item menu-item-type-post_type menu-item-object-page menu-item-1420">
-                <a href=
-                "https://mtpentertainment.com/schedule/">Schedule</a>
-              </li>
-              <li id="menu-item-1419" class=
-              "menu-item menu-item-type-post_type menu-item-object-page menu-item-1419">
-                <a href=
-                "https://mtpentertainment.com/notice/">News</a>
-              </li>
-              <li id="menu-item-1422" class=
-              "menu-item menu-item-type-custom menu-item-object-custom menu-item-1422">
-                <a href=
-                "https://mtpentertainment.com/fanboard/">Fanboard</a>
-              </li>
-              <li id="menu-item-1423" class=
-              "menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1423">
-                <a href=
-                "https://mtpentertainment.com/gallery/">Gallery</a>
-                <ul class="menu">
-                  <li id="menu-item-1424" class=
-                  "menu-item menu-item-type-custom menu-item-object-custom menu-item-1424">
-                    <a href=
-                    "https://mtpentertainment.com/gallery/">Picture</a>
-                  </li>
-                  <li id="menu-item-1425" class=
-                  "menu-item menu-item-type-custom menu-item-object-custom menu-item-1425">
-                    <a href=
-                    "https://mtpentertainment.com/video/">Video</a>
-                  </li>
-                </ul>
-              </li>
-              <li id="menu-item-1426" class=
-              "menu-item menu-item-type-custom menu-item-object-custom menu-item-1426">
-                <a href=
-                "https://mtpentertainment.com/product/">Shop</a>
-              </li>
-              <li class="btn-logout">
-                <a href="https://mtpentertainment.com/login" class=
-                "login-hold">login</a>
-              </li>
-              <li class="btn-logout">
-                <a href="https://mtpentertainment.com/sign-up"
-                class="sign-up-hold">sign up</a>
-              </li>
-            </ul>
+        </div>
+      </nav>
+    </header>
+    <!-- main-->
+
+    <main class="main">
+      <!--========================= Home =====================-->
+
+      <section class="home section" id="home">
+        <div class="home__container container grid">
+          <div class="home__content grid">
+            <div class="home__social">
+              <a
+                href="https://www.linkedin.com/in/venkateeshh/"
+                target="_blank"
+                class="home__social-icon"
+              >
+                <i class="uil uil-linkedin-alt home__icon"></i>
+              </a>
+
+              <a
+                href="https://github.com/Venkateeshh"
+                target="_blank"
+                class="home__social-icon"
+              >
+                <i class="uil uil-github-alt home__icon"></i>
+              </a>
+            </div>
+            <div class="home__img">
+              <svg
+                class="home__blob"
+                viewBox="0 0 200 187"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <mask id="mask0" mask-type="alpha">
+                  <path
+                    d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
+                      130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
+                      97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
+                      0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"
+                  />
+                </mask>
+                <g mask="url(#mask0)">
+                  <path
+                    d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
+                      165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
+                      129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
+                     -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"
+                  />
+                  <image
+                    class="home__blob-img"
+                    x="-79"
+                    y="-46"
+                    xlink:href="assets/img/Pro.jpg"
+                  />
+                </g>
+              </svg>
+            </div>
+            <div class="home__data">
+              <h1 class="home__title">Hi, I'm Venkatesh Kamath</h1>
+              <h3 class="home__subtitle">
+                Information Science Engineering Student
+              </h3>
+              <p class="home__description">
+                A third-year undergraduate engineering student at
+                <strong>Canara Engineering College </strong>, Manglore.
+              </p>
+              <a href="#contact" class="button button--flex">
+                Contact me<i class="uil uil-message button__icon"></i>
+              </a>
+            </div>
           </div>
-        </nav>
+
+          <div class="home__scroll">
+            <a href="#about" class="home__scroll-button button--flex">
+              <i class="uil uil-mouse-alt home__scroll-mouse"></i>
+              <span class="home__scroll-name">Scroll down</span>
+              <i class="uil uil-arrow-down home__scroll-arrow"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!--======================= About========================-->
+
+      <section class="about section" id="about">
+        <h2 class="section__title">About Me</h2>
+        <span class="section__subtitle">My introduction</span>
+
+        <div class="about__container container grid">
+          <img src="assets\img\about.jpg" alt="" class="about__img" />
+
+          <div class="about__data">
+            <p class="about__description">
+              I'm a third-year ISE undergraduate, passionate about technology and an avid reader. I have a self-motivated and can-do attitude, thriving in challenging and dynamic environments. Seeking a competitive position to enhance my skills and contribute to a professional organization. I'm very much passionate to learn new stuff that interests me and can help me to get better.
+            </p>
+
+            <div class="about__info">
+              <div>
+                <span class="about__info-title">08.30+</span>
+                <span class="about__info-name">Aggregate <br />CGPA</span>
+              </div>
+
+              <div>
+                <span class="about__info-title">04+</span>
+                <span class="about__info-name"
+                  >
+                  Projects</span
+                >
+              </div>
+
+              <div>
+                <span class="about__info-title">01+</span>
+                <span class="about__info-name">Months <br />experience</span>
+              </div>
+            </div>
+
+            <div class="about__buttons">
+              <a download="" href="assets\MyCV.pdf" class="button button--flex">
+                Download CV<i class="fas fa-download button__icon"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--===================== SKILLS =====================-->
+
+      <section class="skills section" id="skills">
+        <h2 class="section__title">Skills</h2>
+        <span class="section__subtitle">My technical level</span>
+
+        <div class="skills__container container grid">
+          <div>
+            <!--==================== Skill 1 =================-->
+            <div class="skills__content skills__open">
+              <div class="skills__header">
+                <i class="fas fa-pencil-ruler skills__icon"></i>
+
+                <div>
+                  <h1 class="skills__title">Programming Languages</h1>
+                </div>
+
+                <i class="uil uil-angle-down skills__arrow"></i>
+              </div>
+              
+
+              <div class="skills__list grid">
+                <div class="skills__data">
+                  <div class="skills__titles">
+                    <h3 class="skills__name">C</h3>
+                  </div>
+                  
+                </div>
+                
+                  <div class="skills__data">
+                    <div class="skills__titles">
+                      <h3 class="skills__name">Java</h3>
+                    </div>
+                    
+                  </div>
+                  <div class="skills__data">
+                    <div class="skills__titles">
+                      <h3 class="skills__name">JavaScript</h3>
+                    </div>
+                    
+                  </div>
+                  <div class="skills__data">
+                    <div class="skills__titles">
+                      <h3 class="skills__name">Python</h3>
+                    </div>
+                   
+                  </div>
+                  <div class="skills__data">
+                    <div class="skills__titles">
+                      <h3 class="skills__name">TypeScript</h3>
+                    </div>
+                </div>
+                
+                
+              </div>
+            </div>
+
+            <!--==================== Skill 2 =================-->
+            <div class="skills__content skills__close">
+              <div class="skills__header">
+                <i class="fas fa-code skills__icon"></i>
+
+                <div>
+                  <h1 class="skills__title">IT Constructs</h1>
+                </div>
+
+                <i class="uil uil-angle-down skills__arrow"></i>
+              </div>
+
+              <div class="skills__list grid">
+                <div class="skills__data">
+                  <div class="skills__titles">
+                    <h3 class="skills__name">DBMS</h3>
+                  </div>
+                  
+                </div>
+                <div class="skills__data">
+                  <div class="skills__titles">
+                    <h3 class="skills__name">DS & Algorithms</h3>
+                  </div>
+                  
+                </div>
+                <div class="skills__data">
+                  <div class="skills__titles">
+                    <h3 class="skills__name">OOP</h3>
+                  </div>
+                  
+                </div>
+                <div class="skills__data">
+                  <div class="skills__titles">
+                    <h3 class="skills__name">OS</h3>
+                  </div>
+                  
+                </div>
+                
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <!--==================== Skill 3 =================-->
+            <div class="skills__content skills__close">
+              <div class="skills__header">
+                <i class="fas fa-swatchbook skills__icon"></i>
+                <div>
+                  <h1 class="skills__title">Technologies</h1>
+                </div>
+
+                <i class="uil uil-angle-down skills__arrow"></i>
+              </div>
+
+              <div class="skills__list grid">
+                <div class="skills__data">
+                  <div class="skills__titles">
+                    <h3 class="skills__name">Git</h3>
+                  </div>
+                  
+                </div>
+                <div class="skills__data">
+                  <div class="skills__titles">
+                    <h3 class="skills__name">MongoDB</h3>
+                  </div>
+                  
+                </div>
+                <div class="skills__data">
+                  <div class="skills__titles">
+                    <h3 class="skills__name">MySQL</h3>
+                  </div>
+                  
+                </div>
+                <div class="skills__data">
+                  <div class="skills__titles">
+                    <h3 class="skills__name">NextJs</h3>
+                  </div>
+                  
+                </div>
+                <div class="skills__data">
+                  <div class="skills__titles">
+                    <h3 class="skills__name">NodeJs</h3>
+                  </div>
+                  
+                </div>
+                
+                <div class="skills__data">
+                  <div class="skills__titles">
+                    <h3 class="skills__name">Tailwind</h3>
+                  </div>
+                  
+                </div>
+                <div class="skills__data">
+                  <div class="skills__titles">
+                    <h3 class="skills__name">MySQL</h3>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--==================== Qualifications ==================-->
+
+      <section
+        class="qualification__section service__section"
+        id="qualification"
+      >
+        <h2 class="section__title">Qualification</h2>
+        <span class="section__subtitle">My personal journey</span>
+
+        <div
+          class="qualification__container container grid services__container"
+        >
+          <div class="qualification__tabs">
+            <div
+              class="qualification__button button--flex qualification__active"
+              data-target="#education"
+            >
+              <i class="uil uil-graduation-cap qualification__icon"></i>
+              Education
+            </div>
+          </div>
+
+          <div class="qualification__sections">
+            <!--====== Qualification Content 1 ======-->
+            <div
+              class="qualification__content qualifiation__active services__content"
+              data-content
+              id="education"
+            >
+              <!--====== Qualification 1 ======-->
+              <div class="qualification__data">
+                <div>
+                  <h3 class="qualification__title">SSLC</h3>
+                  <span class="qualification__subtitle"
+                    >S.V.S <br />High School</span
+                  >
+                  <div class="qualification__calender">
+                    <i class="uil uil-calendar-alt"></i>
+                    - 2019
+                  </div>
+                  <span
+                    class="button button--flex button--small button--link services__button"
+                  >
+                    View More
+                    <i class="uil uil-arrow-right button__icon"></i>
+                  </span>
+                  <div class="services__modal">
+                    <div class="services__modal-content">
+                      <h4 class="services__modal-title">
+                        Class 10th Summary :
+                      </h4>
+                      <i class="uil uil-times services__modal-close"></i>
+                      <ul class="services__modal-services grid">
+                        <li class="services__modal-service">
+                          <i
+                            class="uil uil-check-circle services__moda-icon"
+                          ></i>
+                          <p>
+                            Subjects studied: Science, Maths, English,
+                            Social Studies,Kannada,Hindi.
+                          </p>
+                        </li>
+                        <li class="services__modal-service">
+                          <i
+                            class="uil uil-check-circle services__moda-icon"
+                          ></i>
+                          <p>Scored 91%</p>
+                        </li>
+                        <li class="services__modal-service">
+                          <i
+                            class="uil uil-check-circle services__moda-icon"
+                          ></i>
+                          <p>Came runners up in inter-school Ball Badminton</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <span class="qualification__rounder"></span>
+                  <span class="qualification__line"></span>
+                </div>
+              </div>
+
+              <!--====== Qualification 2 ======-->
+              <div class="qualification__data">
+                <div></div>
+
+                <div>
+                  <span class="qualification__rounder"></span>
+                  <span class="qualification__line"></span>
+                </div>
+                <div>
+                  <h3 class="qualification__title">Class 12th</h3>
+                  <span class="qualification__subtitle"
+                    >Vidyodaya <br />Pre University College</span
+                  >
+                  <div class="qualification__calender">
+                    <i class="uil uil-calendar-alt"></i>
+                    - 2021
+                  </div>
+                  <span
+                    class="button button--flex button--small button--link services__button"
+                  >
+                    View More
+                    <i class="uil uil-arrow-right button__icon"></i>
+                  </span>
+                  <div class="services__modal">
+                    <div class="services__modal-content">
+                      <h4 class="services__modal-title">
+                        Class 12th Summary :
+                      </h4>
+                      <i class="uil uil-times services__modal-close"></i>
+                      <ul class="services__modal-services grid">
+                        <li class="services__modal-service">
+                          <i
+                            class="uil uil-check-circle services__moda-icon"
+                          ></i>
+                          <p>
+                            Subjects studied: Physics, Chemistry, Maths,
+                            English, Statistics , Hindi.
+                          </p>
+                        </li>
+                        <li class="services__modal-service">
+                          <i
+                            class="uil uil-check-circle services__moda-icon"
+                          ></i>
+                          <p>Scored 87.5%</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!--====== Qualification 3 ======-->
+              <div class="qualification__data">
+                <div>
+                  <h3 class="qualification__title">College</h3>
+                  <span class="qualification__subtitle"
+                    >Canara Enginnering College, Manglore</span
+                  >
+                  <div class="qualification__calender">
+                    <i class="uil uil-calendar-alt"></i>
+                    2021 - 2025
+                  </div>
+                  <span
+                    class="button button--flex button--small button--link services__button"
+                  >
+                    View More
+                    <i class="uil uil-arrow-right button__icon"></i>
+                  </span>
+                  <div class="services__modal">
+                    <div class="services__modal-content">
+                      <h4 class="services__modal-title">College Summary :</h4>
+                      <i class="uil uil-times services__modal-close"></i>
+                      <ul class="services__modal-services grid">
+                        <li class="services__modal-service">
+                          <i
+                            class="uil uil-check-circle services__modal-icon"
+                          ></i>
+                          <p>
+                            Studying core subjects of IT including DSA, Embedded
+                            systems, Design analysis and algorithm, Operating
+                            systems, and Computer architecture .
+                          </p>
+                        </li>
+                        <li class="services__modal-service">
+                          <i
+                            class="uil uil-check-circle services__modal-icon"
+                          ></i>
+                          <p>Scored an aggregate of 8.50 CGPA till now.</p>
+                        </li>
+                        <li class="services__modal-service">
+                          <i
+                            class="uil uil-check-circle services__modal-icon"
+                          ></i>
+                          <p>
+                            Student coordinator in media and
+                            publication club of the college.
+                          </p>
+                        </li>
+                        <li class="services__modal-service">
+                          <i
+                            class="uil uil-check-circle services__modal-icon"
+                          ></i>
+                          <p>
+                            Club Advisor for GeekHub.
+                          </p>
+                        </li>
+                        <li class="services__modal-service">
+                          <i
+                            class="uil uil-check-circle services__modal-icon"
+                          ></i>
+                          <p>
+                            CodeBlaze hackathon winners under open innovation.
+                          </p>
+                        </li>
+                        <li class="services__modal-service">
+                          <i
+                            class="uil uil-check-circle services__modal-icon"
+                          ></i>
+                          <p>
+                            Runners in Edu-Vitality Hackathon in the track of AI in Education.
+                          </p>
+                        </li>
+                        <li class="services__modal-service">
+                          <i
+                            class="uil uil-check-circle services__modal-icon"
+                          ></i>
+                          <p>
+                            Finalist in Dark Pattern Buster Hackathon conducted by Department of Consumer Affairs of India.
+                          </p>
+                        </li>
+                        
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <span class="qualification__rounder"></span>
+                  <!--<span class="qualification__line"></span>-->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--=================== Portfolio ===================-->
+      <section class="portfolio section" id="portfolio">
+        <h2 class="section__title">Projects</h2>
+        <span class="section__subtitle">Most recent work</span>
+
+        <div class="portfolio__container container swiper-container">
+          <div class="swiper-wrapper">
+            <!-- ------------------------portfollio 1-------------------- -->
+            <div class="portfolio__content grid swiper-slide">
+              <img src="assets/img/portfolio5.png" class="portfolio__img" />
+
+              <div class="portfolio__data">
+                <h3 class="portfolio__title">
+                  DarkSurfer-Extension
+                </h3>
+                <p class="portfolio__description">
+                  DarkSurfer-Extension, is a project based on the application of advanced Language Models LMs to detect and eliminate dark patterns on websites. It aims to improve user-awareness, exposing real-time of devious design practices in situ. It helps make the internet more user-friendly by using its novel LMs and popular LM-based models, such as RoBERTa, BERT, and XLNet.
+                </p>
+                <a
+                  href="https://github.com/Venkateeshh/DarkSurfer-Extension"
+                  class="button button--flex button--small portfolio__button"
+                >
+                  GitHub Repository
+                  <i class="uil uil-external-link-alt button__icon"></i>
+                </a>
+                <a
+                  href="https://darksurfer.streamlit.app/"
+                  class="button button--flex button--small portfolio__button"
+                >
+                  See Live
+                  <i class="uil uil-external-link-alt button__icon"></i>
+                </a>
+              </div>
+            </div>
+            <!-- ------------------------portfollio 2-------------------- -->
+
+            <div class="portfolio__content grid swiper-slide">
+              <img src="assets/img/portfolio1.png" class="portfolio__img" />
+
+              <div class="portfolio__data">
+                <h3 class="portfolio__title">
+                  Responsive-Weather-Forecast-Website
+                </h3>
+                <p class="portfolio__description">
+                  This project is a weather website that provides live weather
+                  updates and forecasts based on your location. Stay informed
+                  about current weather conditions, temperature, and more.
+                  Explore interactive maps, hourly/daily forecasts, and helpful
+                  insights. Stay ahead of the forecast and make the most of your
+                  day!
+                </p>
+                <a
+                  href="https://github.com/Venkateeshh/Weather-App"
+                  class="button button--flex button--small portfolio__button"
+                >
+                  GitHub Repository
+                  <i class="uil uil-external-link-alt button__icon"></i>
+                </a>
+                <a
+                  href="https://venkateeshh.github.io/Weather-App/"
+                  class="button button--flex button--small portfolio__button"
+                >
+                  See Live
+                  <i class="uil uil-external-link-alt button__icon"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- ------------------------portfollio 3-------------------- -->
+            <div class="portfolio__content grid swiper-slide">
+              <img src="assets/img/portfolio2.png" class="portfolio__img" />
+
+              <div class="portfolio__data">
+                <h3 class="portfolio__title">Spotify-Clone</h3>
+                <p class="portfolio__description">
+                  Spotify Clone is a web app developed using HTML, CSS, and
+                  JavaScript. It recreates Spotify's interface and features,
+                  allowing users to browse, search, and play songs, create
+                  playlists, and discover new music. Responsive design ensures a
+                  seamless experience on any device. Contributions are welcome!
+                </p>
+                <a
+                  href="https://github.com/Venkateeshh/Spotify-Clone"
+                  class="button button--flex button--small portfolio__button"
+                >
+                  GitHub Repository
+                  <i class="uil uil-external-link-alt button__icon"></i>
+                </a>
+                <a
+                  href="https://venkateeshh.github.io/Spotify-Clone/"
+                  class="button button--flex button--small portfolio__button"
+                >
+                  See Live
+                  <i class="uil uil-external-link-alt button__icon"></i>
+                </a>
+              </div>
+            </div>
+            <!-- ------------------------portfollio 4-------------------- -->
+            <div class="portfolio__content grid swiper-slide">
+              <img src="assets/img/portfolio3.png" class="portfolio__img" />
+
+              <div class="portfolio__data">
+                <h3 class="portfolio__title">Language Translator</h3>
+                <p class="portfolio__description">
+                  This language translator web app is a user-friendly tool built
+                  with HTML, CSS, and JavaScript. It leverages Google Translate
+                  API to seamlessly translate text between multiple languages.
+                  The app features a simple interface, ensuring smooth
+                  performance across devices..
+                </p>
+                <a
+                  href="https://github.com/Venkateeshh/Js-Language-Translator"
+                  class="button button--flex button--small portfolio__button"
+                >
+                  GitHub Repository
+                  <i class="uil uil-external-link-alt button__icon"></i>
+                </a>
+                <a
+                  href="https://venkateeshh.github.io/Js-Language-Translator/"
+                  class="button button--flex button--small portfolio__button"
+                >
+                  See Live
+                  <i class="uil uil-external-link-alt button__icon"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- ------------------------portfollio 5-------------------- -->
+            <div class="portfolio__content grid swiper-slide">
+              <img src="assets/img/portfolio4.png" class="portfolio__img" />
+
+              <div class="portfolio__data">
+                <h3 class="portfolio__title">Sorting Visualizer</h3>
+                <p class="portfolio__description">
+                  Sorting Visualizer is a Java-based project that allows users
+                  to visualize various sorting algorithms in action using a
+                  Graphical User Interface (GUI). It provides an interactive and
+                  educational way to understand how different sorting algorithms
+                  work by visually demonstrating their step-by-step sorting
+                  process.
+                </p>
+                <a
+                  href="https://github.com/Venkateeshh/Sorting-Visualizer"
+                  class="button button--flex button--small portfolio__button"
+                >
+                  GitHub Repository
+                  <i class="uil uil-external-link-alt button__icon"></i>
+                </a>
+                <a
+                  href="https://www.linkedin.com/posts/venkatesh-kamath-_algorithmdesign-sortingvisualizer-javaprojects-activity-7095437035125043200-fWDl?utm_source=share&utm_medium=member_desktop"
+                  class="button button--flex button--small portfolio__button"
+                >
+                  See Live
+                  <i class="uil uil-external-link-alt button__icon"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- add arrows -->
+          <div class="swiper-button-next">
+            <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
+          </div>
+          <div class="swiper-button-prev">
+            <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
+          </div>
+          <!-- add pagination -->
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+
+      <!--===================== Contact Me =====================-->
+      <section class="contact section" id="contact">
+        <h2 class="section__title">Contact Me</h2>
+        <span class="section__subtitle">Get in touch</span>
+
+        <div class="contact__container container grid">
+          <div>
+            <div class="contact__information">
+              <i class="uil uil-calling contact__icon"></i>
+
+              <div>
+                <h3 class="contact__title">Contact Me</h3>
+                <span class="contact__subtitle"
+                  ><a href="tel:6362243314"></a>6362243314</span
+                >
+              </div>
+            </div>
+
+            <div class="contact__information">
+              <i class="uil uil-envelope-minus contact__icon"></i>
+
+              <div>
+                <h3 class="contact__title">Email</h3>
+                <span class="contact__subtitle"
+                  >rkamathvenkatesh@gmail.com</span
+                >
+              </div>
+            </div>
+
+            <div class="contact__information">
+              <i class="uil uil-map-marker contact__icon"></i>
+
+              <div>
+                <h3 class="contact__title">Location</h3>
+                <span class="contact__subtitle"
+                  >Manglore, Karnataka, India</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <form action="" class="contact__form grid">
+            <div class="contact__inputs grid">
+              <div class="contact__content">
+                <label for="" class="content__label">Name</label>
+                <input type="text" class="contact__input" />
+              </div>
+
+              <div class="contact__content">
+                <label for="" class="content__label">Email</label>
+                <input type="Email" class="contact__input" />
+              </div>
+            </div>
+
+            <div class="contact__content">
+              <label for="" class="content__label">Message</label>
+              <textarea
+                name=""
+                id=""
+                cols="0"
+                rows="7"
+                class="contact__input"
+              ></textarea>
+            </div>
+
+            <div>
+              <a
+                href=" mailto: rkamathvenkatesh@gmail.com?subject=Testing out mailto! &body=This is only a test!"
+                class="button button--flex"
+              >
+                Send Message
+                <i class="uil uil-message button__icon"></i>
+              </a>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!--================== Footer ===============-->
+    <footer class="footer">
+      <div class="footer__bg">
+        <div class="footer__container container grid">
+          <div>
+            <h1 class="footer__title">Venkatesh</h1>
+            <span class="footer__subtitle"
+              >Information Science Engineering Student</span
+            >
+          </div>
+
+          <ul class="footer__links">
+            <li>
+              <a href="#qualification" class="footer__link">Qualification</a>
+            </li>
+            <li>
+              <a href="#portfolio" class="footer__link">Portfolio</a>
+            </li>
+            <li>
+              <a href="#contact" class="footer__link">Contact-Me</a>
+            </li>
+          </ul>
+
+          <div class="footer__socials">
+            <a
+              href="https://www.instagram.com/venkateeshh/"
+              class="footer__social"
+              target="__blank"
+            >
+            <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a
+              href="https://twitter.com/Venkateeshhh"
+              target="__blank"
+              class="footer__social"
+            >
+            <i class="fa-brands fa-x-twitter"></i>
+            </a>
+          </div>
+        </div>
+
+        <p class="footer__copy">&#169; Venkatesh. All right reserved</p>
       </div>
-    </div>
-  </header>
-  <div class="container">
-    <div class="content-wrapper">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="main-content">
-            <div class="entry-content">
-              <div class="vc_row wpb_row vc_row-fluid">
-                <div class=
-                "wpb_column vc_column_container vc_col-sm-12">
-                  <div class="vc_column-inner">
-                    <div class="wpb_wrapper">
-                      <div class=
-                      "wpb_revslider_element wpb_content_element">
-                        <div id="rev_slider_1_1_wrapper" class=
-                        "rev_slider_wrapper fullwidthbanner-container"
-                        data-source="gallery" style=
-                        "margin:0px auto;background:transparent;padding:0px;margin-top:0px;margin-bottom:0px;">
-                          <!-- START REVOLUTION SLIDER 5.4.8.2 fullwidth mode -->
-                          <div id="rev_slider_1_1" class=
-                          "rev_slider fullwidthabanner" style=
-                          "display:none;" data-version="5.4.8.2">
-                            <ul>
-                              <!-- SLIDE  -->
-                              <li data-index="rs-33"
-                              data-transition="fade"
-                              data-slotamount="default"
-                              data-hideafterloop="0"
-                              data-hideslideonmobile="off"
-                              data-easein="default" data-easeout=
-                              "default" data-masterspeed="300"
-                              data-link=
-                              "https://youtu.be/niPkap1ozUA"
-                              data-thumb=
-                              "https://mtpentertainment.com/wp-content/uploads/2023/05/WEBSITE-CHECK-2-120x50.jpg"
-                              data-rotate="0" data-saveperformance=
-                              "off" data-title="Slide" data-param1=
-                              "" data-param2="" data-param3=""
-                              data-param4="" data-param5=""
-                              data-param6="" data-param7=""
-                              data-param8="" data-param9=""
-                              data-param10="" data-description="">
-                              <!-- MAIN IMAGE -->
-                              <img src=
-                              "https://mtpentertainment.com/wp-content/uploads/2023/05/WEBSITE-CHECK-2.jpg"
-                              alt="" title="WEBSITE CHECK 2" width=
-                              "4084" height="1546" data-bgposition=
-                              "center center" data-bgfit="cover"
-                              data-bgrepeat="no-repeat" class=
-                              "rev-slidebg" data-no-retina=""> 
-                              <!-- LAYERS --></li><!-- SLIDE  -->
-                              <li data-index="rs-17"
-                              data-transition="fade"
-                              data-slotamount="default"
-                              data-hideafterloop="0"
-                              data-hideslideonmobile="off"
-                              data-easein="default" data-easeout=
-                              "default" data-masterspeed="300"
-                              data-link=
-                              "https://www.youtube.com/watch?v=psZ1g9fMfeo"
-                              data-target="_blank" data-thumb=
-                              "https://mtpentertainment.com/wp-content/uploads/2020/12/CTCHT-COVER-FB-120x50.jpg"
-                              data-rotate="0" data-saveperformance=
-                              "off" data-title="Slide" data-param1=
-                              "" data-param2="" data-param3=""
-                              data-param4="" data-param5=""
-                              data-param6="" data-param7=""
-                              data-param8="" data-param9=""
-                              data-param10="" data-description="">
-                              <!-- MAIN IMAGE -->
-                              <img src=
-                              "https://mtpentertainment.com/wp-content/uploads/2020/12/CTCHT-COVER-FB.jpg"
-                              alt="" title="CTCHT COVER FB" width=
-                              "3320" height="1263" data-bgposition=
-                              "center center" data-bgfit="cover"
-                              data-bgrepeat="no-repeat" class=
-                              "rev-slidebg" data-no-retina=""> 
-                              <!-- LAYERS --></li>
-                            </ul>
-                            <script>
-                            var htmlDiv = document.getElementById("rs-plugin-settings-inline-css"); var htmlDivCss="";
-                                                if(htmlDiv) {
-                                                        htmlDiv.innerHTML = htmlDiv.innerHTML + htmlDivCss;
-                                                }else{
-                                                        var htmlDiv = document.createElement("div");
-                                                        htmlDiv.innerHTML = "<style>" + htmlDivCss + "</style>";
-                                                        document.getElementsByTagName("head")[0].appendChild(htmlDiv.childNodes[0]);
-                                                }
-                            </script>
-                            <div class="tp-bannertimer tp-bottom"
-                            style="visibility: hidden !important;">
-                            </div>
-                          </div>
-                          <script>
-                          var htmlDiv = document.getElementById("rs-plugin-settings-inline-css"); var htmlDivCss="";
-                                if(htmlDiv) {
-                                        htmlDiv.innerHTML = htmlDiv.innerHTML + htmlDivCss;
-                                }else{
-                                        var htmlDiv = document.createElement("div");
-                                        htmlDiv.innerHTML = "<style>" + htmlDivCss + "</style>";
-                                        document.getElementsByTagName("head")[0].appendChild(htmlDiv.childNodes[0]);
-                                }
-                          </script> 
-                          <script type="text/javascript">
+    </footer>
 
-                          if (setREVStartSize!==undefined) setREVStartSize(
-                          {c: '#rev_slider_1_1', responsiveLevels: [1240,1024,778,480], gridwidth: [1920,1366,778,480], gridheight: [768,768,518,320], sliderLayout: 'fullwidth'});
+    <!--================== SCROLL TOP ==================-->
+    <a href="#" class="scrollup" id="scroll-up">
+      <i class="uil uil-arrow-up scrollup__icon"></i>
+    </a>
 
-                          var revapi1,
-                          tpj;    
-                          (function() {                   
-                          if (!/loaded|interactive|complete/.test(document.readyState)) document.addEventListener("DOMContentLoaded",onLoad); else onLoad();      
-                          function onLoad() {                             
-                          if (tpj===undefined) { tpj = jQuery; if("off" == "on") tpj.noConflict();}
-                          if(tpj("#rev_slider_1_1").revolution == undefined){
-                          revslider_showDoubleJqueryError("#rev_slider_1_1");
-                          }else{
-                          revapi1 = tpj("#rev_slider_1_1").show().revolution({
-                          sliderType:"standard",
-                          jsFileLocation:"//mtpentertainment.com/wp-content/plugins/revslider/public/assets/js/",
-                          sliderLayout:"fullwidth",
-                          dottedOverlay:"none",
-                          delay:9000,
-                          navigation: {
-                                keyboardNavigation:"off",
-                                keyboard_direction: "horizontal",
-                                mouseScrollNavigation:"off",
-                                                        mouseScrollReverse:"default",
-                                onHoverStop:"off",
-                                bullets: {
-                                        enable:true,
-                                        hide_onmobile:false,
-                                        style:"hesperiden",
-                                        hide_onleave:false,
-                                        direction:"horizontal",
-                                        h_align:"right",
-                                        v_align:"bottom",
-                                        h_offset:130,
-                                        v_offset:25,
-                                        space:14,
-                                        tmp:''
-                                }
-                          },
-                          responsiveLevels:[1240,1024,778,480],
-                          visibilityLevels:[1240,1024,778,480],
-                          gridwidth:[1920,1366,778,480],
-                          gridheight:[768,768,518,320],
-                          lazyType:"none",
-                          scrolleffect: {
-                                fade:"on",
-                          },
-                          shadow:0,
-                          spinner:"spinner0",
-                          stopLoop:"off",
-                          stopAfterLoops:-1,
-                          stopAtSlide:-1,
-                          shuffle:"off",
-                          autoHeight:"off",
-                          disableProgressBar:"on",
-                          hideThumbsOnMobile:"off",
-                          hideSliderAtLimit:0,
-                          hideCaptionAtLimit:0,
-                          hideAllCaptionAtLilmit:0,
-                          debugMode:false,
-                          fallbacks: {
-                                simplifyAll:"off",
-                                nextSlideOnWindowFocus:"off",
-                                disableFocusListener:false,
-                          }
-                          });
-                          }; /* END OF revapi call */
-
-                          }; /* END OF ON LOAD FUNCTION */
-                          }()); /* END OF WRAPPING FUNCTION */
-                          </script> 
-                          <script>
-
-                                        var htmlDivCss = unescape(".tp-bullet%7B%0A%09background%3A%20transparent%20%21important%3B%0A%20%20%09border%3A%203px%20solid%20%23fff%20%21important%3B%0A%7D%0A.tp-bullet%3Ahover%2C.tp-bullet.selected%7B%0A%20%20background%3A%20%23fff%20%21important%3B%20%0A%20%20%0A%20%20%20%20%7D");
-                                        var htmlDiv = document.getElementById('rs-plugin-settings-inline-css');
-                                        if(htmlDiv) {
-                                                htmlDiv.innerHTML = htmlDiv.innerHTML + htmlDivCss;
-                                        }
-                                        else{
-                                                var htmlDiv = document.createElement('div');
-                                                htmlDiv.innerHTML = '<style>' + htmlDivCss + '</style>';
-                                                document.getElementsByTagName('head')[0].appendChild(htmlDiv.childNodes[0]);
-                                        }
-                          </script>
-                          <script>
-
-                                        var htmlDivCss = unescape(".hesperiden.tp-bullets%20%7B%0A%7D%0A.hesperiden.tp-bullets%3Abefore%20%7B%0A%09content%3A%22%20%22%3B%0A%09position%3Aabsolute%3B%0A%09width%3A100%25%3B%0A%09height%3A100%25%3B%0A%09background%3Atransparent%3B%0A%09padding%3A10px%3B%0A%09margin-left%3A-10px%3Bmargin-top%3A-10px%3B%0A%09box-sizing%3Acontent-box%3B%0A%20%20%20border-radius%3A8px%3B%0A%20%20%0A%7D%0A.hesperiden%20.tp-bullet%20%7B%0A%09width%3A12px%3B%0A%09height%3A12px%3B%0A%09position%3Aabsolute%3B%0A%09background%3A%20rgb%28153%2C%20153%2C%20153%29%3B%20%2F%2A%20old%20browsers%20%2A%2F%0A%20%20%20%20background%3A%20-moz-linear-gradient%28top%2C%20%20rgb%28153%2C%20153%2C%20153%29%200%25%2C%20rgb%28225%2C%20225%2C%20225%29%20100%25%29%3B%20%2F%2A%20ff3.6%2B%20%2A%2F%0A%20%20%20%20background%3A%20-webkit-linear-gradient%28top%2C%20%20rgb%28153%2C%20153%2C%20153%29%200%25%2Crgb%28225%2C%20225%2C%20225%29%20100%25%29%3B%20%2F%2A%20chrome10%2B%2Csafari5.1%2B%20%2A%2F%0A%20%20%20%20background%3A%20-o-linear-gradient%28top%2C%20%20rgb%28153%2C%20153%2C%20153%29%200%25%2Crgb%28225%2C%20225%2C%20225%29%20100%25%29%3B%20%2F%2A%20opera%2011.10%2B%20%2A%2F%0A%20%20%20%20background%3A%20-ms-linear-gradient%28top%2C%20%20rgb%28153%2C%20153%2C%20153%29%200%25%2Crgb%28225%2C%20225%2C%20225%29%20100%25%29%3B%20%2F%2A%20ie10%2B%20%2A%2F%0A%20%20%20%20background%3A%20linear-gradient%28to%20bottom%2C%20%20rgb%28153%2C%20153%2C%20153%29%200%25%2Crgb%28225%2C%20225%2C%20225%29%20100%25%29%3B%20%2F%2A%20w3c%20%2A%2F%0A%20%20%20%20filter%3A%20progid%3Adximagetransform.microsoft.gradient%28%20%0A%20%20%20%20startcolorstr%3D%22rgb%28153%2C%20153%2C%20153%29%22%2C%20endcolorstr%3D%22rgb%28225%2C%20225%2C%20225%29%22%2Cgradienttype%3D0%20%29%3B%20%2F%2A%20ie6-9%20%2A%2F%0A%09border%3A3px%20solid%20rgb%28229%2C%20229%2C%20229%29%3B%0A%09border-radius%3A50%25%3B%0A%09cursor%3A%20pointer%3B%0A%09box-sizing%3Acontent-box%3B%0A%7D%0A.hesperiden%20.tp-bullet%3Ahover%2C%0A.hesperiden%20.tp-bullet.selected%20%7B%0A%09background%3Argb%28102%2C%20102%2C%20102%29%3B%0A%7D%0A.hesperiden%20.tp-bullet-image%20%7B%0A%7D%0A.hesperiden%20.tp-bullet-title%20%7B%0A%7D%0A%0A");
-                                        var htmlDiv = document.getElementById('rs-plugin-settings-inline-css');
-                                        if(htmlDiv) {
-                                                htmlDiv.innerHTML = htmlDiv.innerHTML + htmlDivCss;
-                                        }
-                                        else{
-                                                var htmlDiv = document.createElement('div');
-                                                htmlDiv.innerHTML = '<style>' + htmlDivCss + '</style>';
-                                                document.getElementsByTagName('head')[0].appendChild(htmlDiv.childNodes[0]);
-                                        }
-                          </script>
-                        </div><!-- END REVOLUTION SLIDER -->
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div id="main-content" class=
-              "vc_row wpb_row vc_row-fluid">
-                <div class=
-                "first-col col-12 wpb_column vc_column_container vc_col-sm-4">
-                  <div class="vc_column-inner">
-                    <div class="wpb_wrapper">
-                      <div class="entry">
-                        <div class="home-thumbnail">
-                          <a href=
-                          "https://mtpentertainment.com/video/sky-tour-2019-official-trailer/">
-                          <img class="img-responsive img-full" src=
-                          "http://img.youtube.com/vi/vn2SIuM7O_U/mqdefault.jpg"
-                          alt=
-                          "SKY TOUR 2019 | OFFICIAL TRAILER"></a>
-                        </div>
-                        <article>
-                          <span class="meta-date">July 12,
-                          2019</span>
-                          <h3 class="entry-title"><a href=
-                          "https://mtpentertainment.com/video/sky-tour-2019-official-trailer/">
-                          SKY TOUR 2019 | OFFICIAL TRAILER</a></h3>
-                        </article>
-                      </div>
-                      <div class="entry">
-                        <div class="home-thumbnail">
-                          <a href=
-                          "https://mtpentertainment.com/video/hay-trao-cho-anh-son-tung-m-tp-ft-snoop-dogg/">
-                          <img class="img-responsive img-full" src=
-                          "http://img.youtube.com/vi/knW7-x7Y7RE/mqdefault.jpg"
-                          alt=
-                          "HÃY TRAO CHO ANH | SƠN TÙNG M-TP ft. SNOOP DOGG"></a>
-                        </div>
-                        <article>
-                          <span class="meta-date">July 2,
-                          2019</span>
-                          <h3 class="entry-title"><a href=
-                          "https://mtpentertainment.com/video/hay-trao-cho-anh-son-tung-m-tp-ft-snoop-dogg/">
-                          HÃY TRAO CHO ANH | SƠN TÙNG M-TP ft.
-                          SNOOP DOGG</a></h3>
-                        </article>
-                      </div>
-                      <div class="view-all">
-                        <a href=
-                        "https://mtpentertainment.com/video">See
-                        all video</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class=
-                "middle-col col-12 col-md-6 wpb_column vc_column_container vc_col-sm-4">
-                  <div class="vc_column-inner">
-                    <div class="wpb_wrapper">
-                      <div class="entry">
-                        <div class="entry-thumbnail">
-                          <a href=
-                          "https://mtpentertainment.com/m-tp-entertainment-ho-tro-xay-diem-truong-lien-cap-cho-thon-lang-nu/">
-                          <img width="70" height="70" src=
-                          "https://mtpentertainment.com/wp-content/uploads/2024/09/1-Thumb-150x150.jpg"
-                          class=
-                          "attachment-70x70 size-70x70 wp-post-image"
-                          alt=""></a>
-                        </div>
-                        <article>
-                          <h3 class="entry-title"><a href=
-                          "https://mtpentertainment.com/m-tp-entertainment-ho-tro-xay-diem-truong-lien-cap-cho-thon-lang-nu/">
-                          M-TP Entertainment hỗ trợ xây điểm trường
-                          liên cấp cho thôn Làng Nủ</a></h3>
-                          <p class="entry-content">Thông qua quỹ
-                          Tấm lòng Việt của Đài Truyền hình Việt
-                          Nam, công ty M-TP Entertainment hỗ trợ
-                          1,5 tỷ đồng xây dựng Điểm trường Liên cấp
-                          Mẫu giáo và Tiểu học mới cho thôn Làng
-                          Nủ, xã Phúc Khánh (Bảo Yên, Lào Cai). Bà
-                          Nguyễn Thị Huyền Trang – Giám đốc truyền
-                          thông của […]</p><span class=
-                          "meta-date">September 26, 2024 | 0
-                          comment</span>
-                        </article>
-                      </div>
-                      <div class="entry">
-                        <div class="entry-thumbnail">
-                          <a href=
-                          "https://mtpentertainment.com/tin-canh-bao-ve-viec-mao-danh-cong-ty-m-tp-entertainment-de-lua-dao-tuyen-dung/">
-                          <img width="70" height="70" src=
-                          "https://mtpentertainment.com/wp-content/uploads/2023/07/image_2023-07-28_11-36-45-150x150.png"
-                          class=
-                          "attachment-70x70 size-70x70 wp-post-image"
-                          alt=""></a>
-                        </div>
-                        <article>
-                          <h3 class="entry-title"><a href=
-                          "https://mtpentertainment.com/tin-canh-bao-ve-viec-mao-danh-cong-ty-m-tp-entertainment-de-lua-dao-tuyen-dung/">
-                          TIN CẢNH BÁO VỀ VIỆC MẠO DANH CÔNG TY
-                          M-TP ENTERTAINMENT ĐỂ LỪA ĐẢO TUYỂN
-                          DỤNG</a></h3>
-                          <p class="entry-content">Thời gian gần
-                          đây, phía Công ty chúng tôi nhận được rất
-                          nhiều trường hợp tố giác các đối tượng
-                          mạo danh Công ty M-TP Entertainment để
-                          lừa đảo tuyển dụng và chiếm đoạt tài sản
-                          của ứng viên với những chiêu thức vô cùng
-                          tinh vi và bài bản. Nhận thấy sự việc có
-                          […]</p><span class="meta-date">July 28,
-                          2023 | 0 comment</span>
-                        </article>
-                      </div>
-                      <div class="entry">
-                        <div class="entry-thumbnail">
-                          <a href=
-                          "https://mtpentertainment.com/khong-co-mv-nhung-making-my-way-cua-son-tung-m-tp-da-hoan-toan-chinh-phuc-hang-trieu-trai-tim-yeu-nhac-tren-toan-the-gioi/">
-                          <img width="70" height="70" src=
-                          "https://mtpentertainment.com/wp-content/uploads/2023/05/MMW-24h-150x150.jpg"
-                          class=
-                          "attachment-70x70 size-70x70 wp-post-image"
-                          alt=""></a>
-                        </div>
-                        <article>
-                          <h3 class="entry-title"><a href=
-                          "https://mtpentertainment.com/khong-co-mv-nhung-making-my-way-cua-son-tung-m-tp-da-hoan-toan-chinh-phuc-hang-trieu-trai-tim-yeu-nhac-tren-toan-the-gioi/">
-                          KHÔNG CÓ MV, NHƯNG “MAKING MY WAY” CỦA
-                          SƠN TÙNG M-TP ĐÃ HOÀN TOÀN CHINH PHỤC
-                          HÀNG TRIỆU TRÁI TIM YÊU NHẠC TRÊN TOÀN
-                          THẾ GIỚI</a></h3>
-                          <p class="entry-content">Nửa đêm ngày
-                          5/5, nghệ sĩ Sơn Tùng M-TP đã cho ra mắt
-                          bản audio ca khúc Making My Way, đánh dấu
-                          sự trở lại đầy ấn tượng và thuyết phục
-                          sau hơn 1 năm im ắng. Making My Way với
-                          thông điệp tích cực về việc hướng về
-                          tương lai, gạt bỏ những muộn
-                          […]</p><span class="meta-date">May 21,
-                          2023 | 0 comment</span>
-                        </article>
-                      </div>
-                      <div class="entry">
-                        <div class="entry-thumbnail">
-                          <a href=
-                          "https://mtpentertainment.com/nghe-si-son-tung-m-tp-chinh-thuc-cho-trinh-lang-phien-ban-audio-cua-making-my-way/">
-                          <img width="70" height="70" src=
-                          "https://mtpentertainment.com/wp-content/uploads/2023/05/MMW-8-150x150.jpg"
-                          class=
-                          "attachment-70x70 size-70x70 wp-post-image"
-                          alt="" srcset=
-                          "https://mtpentertainment.com/wp-content/uploads/2023/05/MMW-8-150x150.jpg 150w, https://mtpentertainment.com/wp-content/uploads/2023/05/MMW-8-300x300.jpg 300w, https://mtpentertainment.com/wp-content/uploads/2023/05/MMW-8-768x768.jpg 768w, https://mtpentertainment.com/wp-content/uploads/2023/05/MMW-8-1024x1024.jpg 1024w, https://mtpentertainment.com/wp-content/uploads/2023/05/MMW-8-848x848.jpg 848w, https://mtpentertainment.com/wp-content/uploads/2023/05/MMW-8-1140x1140.jpg 1140w, https://mtpentertainment.com/wp-content/uploads/2023/05/MMW-8-1170x1170.jpg 1170w, https://mtpentertainment.com/wp-content/uploads/2023/05/MMW-8.jpg 1440w"
-                          sizes=
-                          "(max-width: 70px) 100vw, 70px"></a>
-                        </div>
-                        <article>
-                          <h3 class="entry-title"><a href=
-                          "https://mtpentertainment.com/nghe-si-son-tung-m-tp-chinh-thuc-cho-trinh-lang-phien-ban-audio-cua-making-my-way/">
-                          NGHỆ SĨ SƠN TÙNG M-TP CHÍNH THỨC CHO
-                          TRÌNH LÀNG PHIÊN BẢN AUDIO CỦA MAKING MY
-                          WAY</a></h3>
-                          <p class="entry-content">0h00 ngày
-                          5/5/2023, nghệ sĩ Sơn Tùng M-TP đã chính
-                          thức phát hành bản audio ca khúc Making
-                          My Way trên tất cả các nền tảng: Spotify,
-                          Apple Music, YouTube, Deezer, Amazon
-                          Music, Soundcloud, Tidal và nhiều nền
-                          tảng thông dụng khác trên thế giới.
-                          Making My Way đánh dấu màn comeback được
-                          đông đảo […]</p><span class=
-                          "meta-date">May 21, 2023 | 0
-                          comment</span>
-                        </article>
-                      </div>
-                      <div class="entry">
-                        <div class="entry-thumbnail">
-                          <a href=
-                          "https://mtpentertainment.com/making-my-way-sieu-du-an-cua-nghe-si-son-tung-m-tp-chinh-thuc-duoc-trinh-lang/">
-                          <img width="70" height="70" src=
-                          "https://mtpentertainment.com/wp-content/uploads/2023/05/POSTER-KHO%CC%82%CC%89-VUO%CC%82NG-150x150.png"
-                          class=
-                          "attachment-70x70 size-70x70 wp-post-image"
-                          alt="" srcset=
-                          "https://mtpentertainment.com/wp-content/uploads/2023/05/POSTER-KHỔ-VUÔNG-150x150.png 150w, https://mtpentertainment.com/wp-content/uploads/2023/05/POSTER-KHỔ-VUÔNG-300x300.png 300w, https://mtpentertainment.com/wp-content/uploads/2023/05/POSTER-KHỔ-VUÔNG-768x768.png 768w, https://mtpentertainment.com/wp-content/uploads/2023/05/POSTER-KHỔ-VUÔNG-1024x1024.png 1024w, https://mtpentertainment.com/wp-content/uploads/2023/05/POSTER-KHỔ-VUÔNG-848x848.png 848w, https://mtpentertainment.com/wp-content/uploads/2023/05/POSTER-KHỔ-VUÔNG.png 1080w"
-                          sizes=
-                          "(max-width: 70px) 100vw, 70px"></a>
-                        </div>
-                        <article>
-                          <h3 class="entry-title"><a href=
-                          "https://mtpentertainment.com/making-my-way-sieu-du-an-cua-nghe-si-son-tung-m-tp-chinh-thuc-duoc-trinh-lang/">
-                          MAKING MY WAY – SIÊU DỰ ÁN CỦA NGHỆ SĨ
-                          SƠN TÙNG M-TP CHÍNH THỨC ĐƯỢC TRÌNH
-                          LÀNG</a></h3>
-                          <p class="entry-content">Sơn Tùng M-TP đã
-                          chính thức “dọn đường” cho sự trở lại đầy
-                          mạnh mẽ vào năm 2023 với tầm nhìn đưa âm
-                          nhạc Việt Nam vươn ra thế giới. Ngày 23/4
-                          vừa qua, Sơn Tùng M-TP đã khiến mạng xã
-                          hội bùng nổ với 1 hình ảnh đầy bí ẩn chỉ
-                          với 3 ký […]</p><span class=
-                          "meta-date">May 21, 2023 | 0
-                          comment</span>
-                        </article>
-                      </div>
-                      <div class="view-all">
-                        <a href=
-                        "https://mtpentertainment.com/notice">See
-                        all post</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class=
-                "last-col col-md-6 wpb_column vc_column_container vc_col-sm-4">
-                  <div class="vc_column-inner">
-                    <div class="wpb_wrapper">
-                      <div class="fb-page" data-href=
-                      "https://www.facebook.com/MTP.Fan/"
-                      data-tabs="timeline" data-height="400"
-                      data-small-header="false"
-                      data-adapt-container-width="true"
-                      data-hide-cover="false" data-show-facepile=
-                      "true">
-                        <blockquote cite=
-                        "https://www.facebook.com/MTP.Fan/" class=
-                        "fb-xfbml-parse-ignore">
-                          <a href=
-                          "https://www.facebook.com/MTP.Fan/">M-TP</a>
-                        </blockquote>
-                      </div>
-                      <div class="socical-widget">
-                        <h5>Follow us on</h5><a href=
-                        "https://www.facebook.com/MTP.Fan/?fref=ts"
-                        target="_blank"></a> <a href=
-                        "https://www.youtube.com/channel/UClyA28-01x4z60eWQ2kiNbA"
-                        target="_blank"></a> <a href=
-                        "https://twitter.com/sontungmtp777/"
-                        target="_blank"></a> <a href=
-                        "https://www.instagram.com/sontungmtp/"
-                        target="_blank"></a>
-                      </div>
-                      <div class="view-all">
-                        <a href="https://www.facebook.com/MTP.Fan/"
-                        target="_blank">Go to Facebook</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div><!--.entry-content-->
-          </div><!--.main-content-->
-        </div><!--.col-md-12-->
-      </div><!--.row-->
-    </div><!--.content-wrapper-->
-  </div><!--.container-->
-  <footer id="footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-xl-5 col-md-5 col-xs-12 l-col">
-          <div id="f_logo">
-            <h5>Công ty TNHH M-TP Entertainment</h5><span>Tầng 2,
-            Tòa nhà ROSANA, Số 60 Nguyễn Đình Chiểu, Phường Đa Kao,
-            Quận 1, Thành phố Hồ Chí Minh, Việt Nam. GPKD Số
-            0314101016 Do Sở kế hoạch và đầu tư cấp ngày
-            08/11/2016</span>
-          </div>
-        </div>
-        <div class="col-xl-5 col-md-5 col-xs-12 l-col">
-          <div id="f_sign_up">
-            <form action="">
-              <div class="f_sign_up_g">
-                <input type="text" placeholder="Email Address">
-                <input type="submit" class="sign_up_btn" value=
-                "Sign up">
-              </div>
-            </form>
-          </div>
-        </div>
-        <div class="col-xl-2 col-md-2 col-xs-12 r-col">
-          <!--  <div id="f_menu">
-                                            </div> -->
-          <div id="f_social">
-            <a href=
-            "http://online.gov.vn/HomePage/CustomWebsiteDisplay.aspx?DocId=34968">
-            <img src=
-            "https://mtp.demoswebsite.com/wp-content/uploads/2019/05/20150827110756-dathongbao.png"
-            style="max-width:150px"></a> 
-            <!-- <a href="https://www.facebook.com/MTP.Fan/?fref=ts" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://www.instagram.com/sontungmtp/" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.youtube.com/channel/UClyA28-01x4z60eWQ2kiNbA" target="_blank"><i class="fab fa-youtube"></i></a> -->
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
-  <script type="text/javascript">
-                                function revslider_showDoubleJqueryError(sliderID) {
-                                        var errorMessage = "Revolution Slider Error: You have some jquery.js library include that comes after the revolution files js include.";
-                                        errorMessage += "<br> This includes make eliminates the revolution slider libraries, and make it not work.";
-                                        errorMessage += "<br><br> To fix it you can:<br>&nbsp;&nbsp;&nbsp; 1. In the Slider Settings -> Troubleshooting set option:  <strong><b>Put JS Includes To Body</b></strong> option to true.";
-                                        errorMessage += "<br>&nbsp;&nbsp;&nbsp; 2. Find the double jquery.js include and remove it.";
-                                        errorMessage = "<span style='font-size:16px;color:#BC0C06;'>" + errorMessage + "</span>";
-                                                jQuery(sliderID).show().html(errorMessage);
-                                }
-  </script> 
-  <script type='text/javascript'>
-
-  /* <![CDATA[ */
-  var wpcf7 = {"apiSettings":{"root":"https:\/\/mtpentertainment.com\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"}};
-  /* ]]> */
-  </script> 
-  <script type='text/javascript' src=
-  'https://mtpentertainment.com/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=5.1.3'></script>
-  
-  <script type='text/javascript' src=
-  'https://mtpentertainment.com/wp-content/themes/v-theme/js/bootstrap.min.js?ver=5.1.19'></script>
-  
-  <script type='text/javascript' src=
-  'https://mtpentertainment.com/wp-content/themes/v-theme/js/tx.min.js?ver=5.1.19'></script>
-  
-  <script type='text/javascript' src=
-  'https://mtpentertainment.com/wp-content/themes/v-theme/js/Draggable.min.js?ver=5.1.19'></script>
-  
-  <script type='text/javascript' src=
-  'https://mtpentertainment.com/wp-content/themes/v-theme/js/popper.min.js?ver=5.1.19'></script>
-  
-  <script type='text/javascript' src=
-  'https://mtpentertainment.com/wp-content/themes/v-theme/js/slick/slick.min.js?ver=1.6.0'></script>
-  
-  <script type='text/javascript' src=
-  'https://mtpentertainment.com/wp-content/themes/v-theme/js/jquery.validate.min.js?ver=1.16'></script>
-  
-  <script type='text/javascript' src=
-  'https://mtpentertainment.com/wp-includes/js/imagesloaded.min.js?ver=3.2.0'></script>
-  
-  <script type='text/javascript' src=
-  'https://mtpentertainment.com/wp-includes/js/masonry.min.js?ver=3.3.2'></script>
-  
-  <script type='text/javascript' src=
-  'https://mtpentertainment.com/wp-content/themes/v-theme/js/jquery.fancybox.min.js?ver=4.1.1'></script>
-  
-  <script type='text/javascript' src=
-  'https://mtpentertainment.com/wp-includes/js/wp-embed.min.js?ver=5.1.19'></script>
-  
-  <script type='text/javascript' src=
-  'https://mtpentertainment.com/wp-content/plugins/js_composer/assets/js/dist/js_composer_front.min.js?ver=5.7'></script>
-  
-  <script>
-
-        
-  $(function () {
-    'use strict'
-    $('[data-toggle="offcanvas"]').on('click', function () {
-      $('.offcanvas-collapse').toggleClass('open')
-    })
-  });
-
-  $(".nav-button").click(function(){
-    var slider_height = jQuery("#slider").height();
-    var topa = jQuery('#header').offset().top;
-    if($(this).hasClass('active')){
-      $(this).removeClass('active');
-        $("#header").removeClass('folded');
-        $(".offcanvas-collapse").addClass('open');
-    }else{
-       $(this).addClass('active');
-       $("#header").addClass('folded');;
-       $(".offcanvas-collapse").removeClass('open');
-    }
-  });
-
-
-
-  jQuery(".video-slider").slick({
-    dots: false,
-    infinite: true,
-    speed: 300,
-    slidesToShow: 3,
-    slidesToScroll: 3,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-        }
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ]
-    });
-  </script> 
-  <script>
-
-    var youtube_ID = $('.each-video:first').attr('alt');
-    $('#change-youtube-when-click').attr('src','https://www.youtube.com/embed/'+youtube_ID);
-    $(document).on('click','.each-video',function(e){
-        e.preventDefault();
-        var youtube_ID = $(this).attr('alt');
-        $('#change-youtube-when-click').attr('src','https://www.youtube.com/embed/'+youtube_ID);
-    });
-    
-    $('.multiple-items').slick({
-    infinite: true,
-    slidesToShow: 3,
-    slidesToScroll: 3,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-        }
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2
-        }
-      }
-    ]
-
-  });
-  </script>
-  <div id="fb-root"></div>
-  <script async defer crossorigin="anonymous" src=
-  "https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&amp;version=v3.2"></script>
-  
-  <script>
-
-  $(".choose-type-group").on("click", ".selected", function() {
-      var parent = $(this).parent('.choose-type-group');
-      parent.find('.customer-btn:not(.selected)').toggle();
-
-    });
-
-    
-
-    $(".choose-type-group").on("click", "a:not(.selected)", function() {
-
-      var parent = $(this).parent('.choose-type-group');
-
-      parent.find(".customer-btn.selected").removeClass('selected');
-
-      $(this).addClass('selected');
-
-      var allOptions = $('.customer-btn:not(.selected)');
-
-      allOptions.hide();
-
-      var vl = $(this).data("type");
-
-      if(vl == "event"){
-
-        $(".type-event").removeClass("hide");
-
-        $(".type-brand").addClass("hide");
-
-      }else{
-
-        $(".type-event").addClass("hide");
-
-        $(".type-brand").removeClass("hide");
-
-      }
-
-    });
-  </script>
-  <!-- Page supported by LiteSpeed Cache 2.9.7.1 on 2025-04-17 16:49:45 -->
-</body>
+    <script type="text/javascript" src="assets/swiper-bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/2205d59d52.js" crossorigin="anonymous"></script>
+    <script src="assets/ptj.js"></script>
+  </body>
 </html>
