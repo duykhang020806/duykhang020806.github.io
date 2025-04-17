@@ -1,8 +1,4 @@
-/**
- * The Game Keyboard
- */
 class Keyboard {
-    
     /**
      * The Game Keyboard constructor
      * @param {Display} display
@@ -10,40 +6,44 @@ class Keyboard {
      * @param {Object}  shortcuts
      */
     constructor(display, scores, shortcuts) {
-        this.fastKeys   = [ 37, 65, 40, 83, 39, 68 ];
+        this.fastKeys   = [ 37, 65, 40, 83, 39, 68 ]; // Mã phím để di chuyển
         this.shortcuts  = shortcuts;
         this.keyPressed = null;
         this.count      = 0;
-        
         this.display    = display;
         this.scores     = scores;
         
         document.addEventListener("keydown", (e) => this.onKeyDown(e));
         document.addEventListener("keyup",   (e) => this.onKeyUp(e));
     }
-    
-    
+
     /**
-     * Called when holding a key
+     * Key handler for the on key down event
+     * @param {Event} event
      */
-    holdingKey() {
-        if (this.keyPressed) {
-            this.count += 1;
-            if (this.count > 8) {
-                this.onKeyHold();
-                this.count -= 3;
+    onKeyDown(event) {
+        // Chỉ xử lý khi phím được nhấn lần đầu
+        if (this.display.isPlaying() && this.fastKeys.indexOf(event.keyCode) > -1) {
+            if (this.keyPressed === null) {
+                this.keyPressed = event.keyCode;
+                this.pressKey(this.keyPressed, event);  // Gọi hàm để di chuyển ngay khi nhấn phím
+            } else {
+                return;
             }
         }
     }
-    
+
     /**
-     * Resets the counter
+     * Key handler for the on key up event
+     * @param {Event} event
      */
-    reset() {
-        this.count = 0;
+    onKeyUp(event) {
+        // Đặt lại trạng thái khi phím được nhả ra
+        if (this.keyPressed === event.keyCode) {
+            this.keyPressed = null;
+        }
     }
-    
-    
+
     /**
      * Key Press Event
      * @param {number} key
@@ -59,7 +59,8 @@ class Keyboard {
             if (!this.display.isPlaying()) {
                 event.preventDefault();
             }
-            
+
+            // Xử lý các phím chức năng khác
             if ([8, 66, 78].indexOf(key) > -1) {            // Backspace / B / N
                 key = "B";
             } else if ([13, 79, 84].indexOf(key) > -1) {    // Enter / O / T
@@ -86,46 +87,13 @@ class Keyboard {
                 }
                 key = String.fromCharCode(key);
             }
-            
+
             if (number !== null) {
                 this.shortcuts.number(number);
             }
             if (this.shortcuts[this.display.get()][key]) {
                 this.shortcuts[this.display.get()][key]();
             }
-        }
-    }
-    
-    /**
-     * Key handler for the on key down event
-     * @param {Event} event
-     */
-    onKeyDown(event) {
-        if (this.display.isPlaying() && this.fastKeys.indexOf(event.keyCode) > -1) {
-            if (this.keyPressed === null) {
-                this.keyPressed = event.keyCode;
-            } else {
-                return;
-            }
-        }
-        this.pressKey(event.keyCode, event);
-    }
-    
-    /**
-     * Key handler for the on key up event
-     * @param {Event} event
-     */
-    onKeyUp() {
-        this.keyPressed = null;
-        this.count      = 0;
-    }
-    
-    /**
-     * When a key is pressed, this is called on each frame for fast key movements
-     */
-    onKeyHold() {
-        if (this.keyPressed !== null && this.display.isPlaying()) {
-            this.pressKey(this.keyPressed);
         }
     }
 }
