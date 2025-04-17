@@ -1,42 +1,54 @@
+/**
+ * The Game Keyboard
+ */
 class Keyboard {
+    
+    /**
+     * The Game Keyboard constructor
+     * @param {Display} display
+     * @param {Scores}  scores
+     * @param {Object}  shortcuts
+     */
     constructor(display, scores, shortcuts) {
-        this.fastKeys   = [ 37, 65, 40, 83, 39, 68 ]; // Mã phím di chuyển
+        this.fastKeys   = [ 37, 65, 40, 83, 39, 68 ];
         this.shortcuts  = shortcuts;
         this.keyPressed = null;
         this.count      = 0;
+        
         this.display    = display;
         this.scores     = scores;
-
-        this.speed = 0.5; // Tốc độ di chuyển mặc định = 0.5 (chậm)
-        this.lastPressedTime = 0;
-        this.moveDelay = 150; // Thời gian delay (ms) giữa các lần di chuyển
-
+        
         document.addEventListener("keydown", (e) => this.onKeyDown(e));
         document.addEventListener("keyup",   (e) => this.onKeyUp(e));
     }
-
-    onKeyDown(event) {
-        let currentTime = Date.now();
-        
-        // Kiểm tra xem thời gian giữa các lần nhấn có đủ lâu không (so với moveDelay)
-        if (currentTime - this.lastPressedTime > this.moveDelay) {
-            this.lastPressedTime = currentTime; // Cập nhật thời gian nhấn lần này
-            if (this.display.isPlaying() && this.fastKeys.indexOf(event.keyCode) > -1) {
-                if (this.keyPressed === null) {
-                    this.keyPressed = event.keyCode;
-                    this.pressKey(this.keyPressed, event); // Di chuyển khối
-                }
+    
+    
+    /**
+     * Called when holding a key
+     */
+    holdingKey() {
+        if (this.keyPressed) {
+            this.count += 1;
+            if (this.count > 8) {
+                this.onKeyHold();
+                this.count -= 3;
             }
         }
     }
-
-    onKeyUp(event) {
-        // Đặt lại trạng thái khi phím được nhả ra
-        if (this.keyPressed === event.keyCode) {
-            this.keyPressed = null;
-        }
+    
+    /**
+     * Resets the counter
+     */
+    reset() {
+        this.count = 0;
     }
-
+    
+    
+    /**
+     * Key Press Event
+     * @param {number} key
+     * @param {?Event} event
+     */
     pressKey(key, event) {
         let number = null;
         if (this.scores.isFocused()) {
@@ -47,8 +59,7 @@ class Keyboard {
             if (!this.display.isPlaying()) {
                 event.preventDefault();
             }
-
-            // Xử lý các phím chức năng khác
+            
             if ([8, 66, 78].indexOf(key) > -1) {            // Backspace / B / N
                 key = "B";
             } else if ([13, 79, 84].indexOf(key) > -1) {    // Enter / O / T
@@ -75,26 +86,46 @@ class Keyboard {
                 }
                 key = String.fromCharCode(key);
             }
-
+            
             if (number !== null) {
                 this.shortcuts.number(number);
             }
-
-            // Giảm tốc độ di chuyển tại đây (tốc độ = 0.5 nếu bạn muốn di chuyển chậm hơn)
-            if (this.speed === 0.5) {
-                // Tốc độ di chuyển chậm
-                this.shortcuts[this.display.get()][key]();
-            } else if (this.speed === 1) {
-                // Tốc độ di chuyển nhanh
+            if (this.shortcuts[this.display.get()][key]) {
                 this.shortcuts[this.display.get()][key]();
             }
         }
     }
-
-    // Phương thức để điều chỉnh tốc độ di chuyển
-    setSpeed(speed) {
-        if (speed === 0.5 || speed === 1) {
-            this.speed = speed; // Thay đổi tốc độ
+    
+    /**
+     * Key handler for the on key down event
+     * @param {Event} event
+     */
+    onKeyDown(event) {
+        if (this.display.isPlaying() && this.fastKeys.indexOf(event.keyCode) > -1) {
+            if (this.keyPressed === null) {
+                this.keyPressed = event.keyCode;
+            } else {
+                return;
+            }
+        }
+        this.pressKey(event.keyCode, event);
+    }
+    
+    /**
+     * Key handler for the on key up event
+     * @param {Event} event
+     */
+    onKeyUp() {
+        this.keyPressed = null;
+        this.count      = 0;
+    }
+    
+    /**
+     * When a key is pressed, this is called on each frame for fast key movements
+     */
+    onKeyHold() {
+        if (this.keyPressed !== null && this.display.isPlaying()) {
+            this.pressKey(this.keyPressed);
         }
     }
 }
