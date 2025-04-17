@@ -142,10 +142,15 @@ body.dark-theme {
   box-shadow: 0 4px 8px rgba(0,0,0,0.15);
   padding: 0.5rem 0;
   border-radius: 0.5rem;
-  display: none;
-  z-index: 100;
   min-width: 180px;
+  z-index: 100;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
 }
+
 
 .dropdown__item {
   display: block;
@@ -163,8 +168,12 @@ body.dark-theme {
 
 /* Show dropdown on hover */
 .nav__dropdown:hover .dropdown__menu {
-  display: block;
+  display: block;         /* giữ lại để khắc phục bug hiển thị */
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
+
 
 /* Optional: Style the arrow icon if used */
 .dropdown__arrow {
