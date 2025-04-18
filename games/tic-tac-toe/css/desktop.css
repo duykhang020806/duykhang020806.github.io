@@ -4,12 +4,10 @@
     height:465px;
   }
 
-.gameBoard td {
-  color: white;
-  text-align: center;
-  vertical-align: middle;
-  font-size: 4em; /* hoặc kích thước bạn muốn */
-}
+  .gameBoard tr td{
+    width:150px;
+    height:150px;
+  }
 
   #gameOver {
     width:50%;
@@ -27,16 +25,18 @@
   }
 
   #scoreBoard label {
-  color: white;
-}
+    font-size:2.5em;
+    margin-left:0;
+  }
 
   #scoreBoard label:nth-child(3) {
     margin-left:0px;
 }
 
- #scoreBoard span {
-  color: white;
-}
+  #scoreBoard span {
+    font-size:8em;
+    display:block;
+  }
 
   #scoreBoard #playerScore {
     margin-bottom:10%;
