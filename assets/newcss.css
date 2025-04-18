@@ -1221,6 +1221,12 @@ img {
   }
 }
 
+.section--divider {
+  border-top: 4px solid var(--first-color);
+  margin-top: 2rem;
+  padding-top: 2rem;
+  text-align: center;
+}
 
 
 /* For large devices */
