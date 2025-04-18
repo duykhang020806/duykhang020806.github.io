@@ -938,15 +938,6 @@ img {
   color: #fff;
 }
 
-/* Khi người dùng ở trên trang Tệp Tin */
-body.page-tep-tin .nav__item a[href="/tep-tin"] {
-    color: #4CAF50; /* Màu xanh bạn muốn */
-}
-
-/* Cũng có thể áp dụng cho phần hiện thị khi bấm vào */
-.nav__item a:active {
-    color: #4CAF50;
-}
 
 
 /*==================== Scroll Up ==================*/
