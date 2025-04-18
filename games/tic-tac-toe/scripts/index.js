@@ -97,7 +97,7 @@ let playSound = (soundIndex) => {
 let gameOver = (result) => {
   setTimeout(playSound(0), 900);
   currWinner = result.winner;
-  let winner = ( currWinner == 1) ? {team:"Player", scoreId:"playerScore"} : (currWinner == 0)? {team:"Computer", scoreId:"enemyScore"} : {team: "Draw", scoreId: null};
+  let winner = ( currWinner == 1) ? {team:"Player", scoreId:"playerScore"} : (currWinner == 0)? {team:"Computer", scoreId:"enemyScore"} : {team: "Hòa", scoreId: null};
   if (winner.scoreId != null) {
     let scorer = document.getElementById(winner.scoreId);
     scorer.innerHTML = Number(scorer.innerHTML) + 1;
