@@ -69,3 +69,35 @@ button:hover {
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: 8em;
 }
+/* Media query cho các thiết bị di động */
+@media (max-width: 768px) {
+    .container {
+        width: 90%; /* Thay đổi kích thước container cho nhỏ hơn trên di động */
+        padding: 15px;
+    }
+
+    .container > h1 {
+        font-size: 30px; /* Giảm kích thước chữ tiêu đề */
+    }
+
+    button {
+        font-size: 20px; /* Giảm kích thước nút trên điện thoại */
+        padding: 5px 20px;
+    }
+
+    .puzzle {
+        width: 20em; /* Giảm kích thước lưới trên di động */
+        height: 20em;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: 6em; /* Giảm kích thước mỗi ô trong lưới */
+    }
+
+    .puzzle-container img {
+        width: 100px; /* Điều chỉnh kích thước hình ảnh trong ô */
+    }
+
+    /* Thay đổi phông nền của trò chơi trên màn hình nhỏ */
+    body {
+        background-size: cover;
+    }
+}
