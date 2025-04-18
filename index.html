@@ -927,6 +927,19 @@
 
 
 
+<!-- Thêm phần script vào cuối trang -->
+<script>
+  // Tạo đối tượng chấm tròn
+  const cursor = document.createElement('div');
+  cursor.classList.add('cursor');
+  document.body.appendChild(cursor);
+
+  // Lắng nghe sự kiện di chuyển chuột
+  document.addEventListener('mousemove', (e) => {
+    cursor.style.left = `${e.pageX - cursor.offsetWidth / 2}px`; // Đặt vị trí ngang của chuột
+    cursor.style.top = `${e.pageY - cursor.offsetHeight / 2}px`; // Đặt vị trí dọc của chuột
+  });
+</script>
 
     <!--================== SCROLL TOP ==================-->
     <a href="#" class="scrollup" id="scroll-up">
