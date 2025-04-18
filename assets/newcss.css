@@ -34,17 +34,30 @@
   --small-font-size: 0.813rem;
   --smaller-font-size: 0.75rem;
 
-  /* Tạo hiệu ứng chấm tròn */
+  /* Ẩn con chuột mặc định */
+body {
+  cursor: none;
+}
+
+/* Tạo hiệu ứng chấm tròn */
 .cursor {
   position: absolute;
   width: 20px;  /* Kích thước chấm tròn */
   height: 20px;
   border-radius: 50%;
-  background-color: var(--first-color); /* Màu chấm tròn */
+  background-color: rgba(0, 0, 255, 0.6); /* Màu chấm tròn (có độ trong suốt) */
   pointer-events: none; /* Đảm bảo chấm tròn không can thiệp vào các phần tử khác */
-  transition: transform 0.1s ease-out; /* Thêm hiệu ứng mượt mà */
+  transition: transform 0.1s ease-out, opacity 0.2s ease; /* Thêm hiệu ứng mượt mà */
   z-index: 10000;
+  box-shadow: 0 0 15px rgba(0, 0, 255, 0.5); /* Bóng đổ xung quanh chấm tròn */
+  opacity: 0.6; /* Độ mờ cho chấm tròn */
 }
+
+.cursor:hover {
+  opacity: 1; /* Tăng độ sáng khi chuột di chuyển */
+  box-shadow: 0 0 25px rgba(0, 0, 255, 0.7); /* Bóng đổ mạnh hơn khi hover */
+}
+
 
   
   /*=========== Font weight ==========*/
