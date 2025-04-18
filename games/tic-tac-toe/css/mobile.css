@@ -24,6 +24,7 @@
     }
 
     .gameBoard tr td{
+        color: white;
         border:5px solid white;
         width:100px;
         height:100px;
@@ -35,7 +36,12 @@
     .gameBoard tr:first-child td{
         border-top:none;
     }
-  
+
+     #scoreBoard label,
+     #scoreBoard span {
+      color: white;
+       }
+
     .gameBoard tr td:first-child {
         border-left:none;
     }
