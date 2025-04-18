@@ -927,7 +927,7 @@
 
 
 
-
+<!--==============================HIEU UNG CHUOT =================-->
 <script>
   // Tạo đối tượng chấm tròn
   const cursor = document.createElement('div');
@@ -936,10 +936,17 @@
 
   // Lắng nghe sự kiện di chuyển chuột
   document.addEventListener('mousemove', (e) => {
+    cursor.classList.add('active'); // Kích hoạt chấm tròn khi di chuyển chuột
     cursor.style.left = `${e.pageX - cursor.offsetWidth / 2}px`; // Đặt vị trí ngang của chuột
     cursor.style.top = `${e.pageY - cursor.offsetHeight / 2}px`; // Đặt vị trí dọc của chuột
   });
+
+  // Ẩn chấm tròn khi chuột không di chuyển
+  document.addEventListener('mouseleave', () => {
+    cursor.classList.remove('active'); // Tắt hiệu ứng khi chuột ra khỏi màn hình
+  });
 </script>
+
 
 
     <!--================== SCROLL TOP ==================-->
