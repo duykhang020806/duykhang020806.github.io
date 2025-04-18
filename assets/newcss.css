@@ -34,6 +34,19 @@
   --small-font-size: 0.813rem;
   --smaller-font-size: 0.75rem;
 
+  /* Tạo hiệu ứng chấm tròn */
+.cursor {
+  position: absolute;
+  width: 20px;  /* Kích thước chấm tròn */
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--first-color); /* Màu chấm tròn */
+  pointer-events: none; /* Đảm bảo chấm tròn không can thiệp vào các phần tử khác */
+  transition: transform 0.1s ease-out; /* Thêm hiệu ứng mượt mà */
+  z-index: 10000;
+}
+
+  
   /*=========== Font weight ==========*/
 
   --font-medium: 500;
