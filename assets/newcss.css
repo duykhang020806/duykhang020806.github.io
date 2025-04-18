@@ -1270,5 +1270,34 @@ img {
   flex: 1;
 }
 
+  /* Cố định chiều cao của body và giữ footer ở dưới cùng */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+/* Tạo khung cho chữ "Tệp Tin" */
+.tep-tin-header {
+  background-color: #4f7ad2; /* Màu xanh tương tự ảnh bạn gửi */
+  padding: 20px;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 10px;
+}
+
+/* Footer */
+footer {
+  margin-top: auto; /* Đẩy footer xuống dưới cùng */
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 1rem;
+}
+
   
 }
