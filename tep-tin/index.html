@@ -20,12 +20,12 @@
         margin-top: 2rem;
         margin-bottom: 1rem;
       }
-      .file-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        gap: 40px;
+      .file-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
         padding: 40px;
-        justify-items: center;
         text-align: center;
       }
       .file-item {
@@ -109,8 +109,9 @@
       </header>
 
       <main class="main">
+        <div class="file-title">   </div>
         <div class="file-title">Tệp tin</div>
-        <section class="file-grid">
+        <section class="file-list">
           <div class="file-item">abcd <a class="file-link" href="#">[Tải xuống]</a></div>
           <div class="file-item">abcd <a class="file-link" href="#">[Tải xuống]</a></div>
           <div class="file-item">abcd <a class="file-link" href="#">[Tải xuống]</a></div>
