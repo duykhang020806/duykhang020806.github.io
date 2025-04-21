@@ -36,8 +36,18 @@
 
   
 
+/* ==========Cap nhat mau den=========*/
+ .file-link {
+  color: #000; /* Màu đen khi sáng */
+  font-weight: bold;
+  text-decoration: none;
+  margin-left: 10px;
+}
 
- 
+body[data-theme="dark"] .file-link {
+  color: #fff; /* Màu trắng khi ở chế độ tối */
+}
+
 
 
   
