@@ -37,6 +37,27 @@
   
 
 
+  /* Thiết lập cho phần tử vòng tròn */
+.circle {
+  position: absolute;
+  width: 30px; /* Kích thước vòng tròn */
+  height: 30px;
+  border-radius: 50%;
+  background-color: white;
+  pointer-events: none; /* Để vòng tròn không chặn các sự kiện chuột khác */
+  transform: translate(-50%, -50%); /* Để vòng tròn di chuyển chính xác */
+  transition: transform 0.1s ease-out; /* Hiệu ứng mượt mà khi vòng tròn di chuyển */
+}
+
+/* Toàn bộ trang web có nền tối */
+body {
+  background-color: #333;
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+
   
   /*=========== Font weight ==========*/
 
