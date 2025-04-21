@@ -27,7 +27,7 @@ class Keyboard {
         this.count = 0;
     }
 
-     pressKey(key, event) {
+    pressKey(key, event) {
         let number = null;
         if (this.scores.isFocused()) {
             if (key === 13) {
@@ -73,23 +73,23 @@ class Keyboard {
             }
         }
     }
-    
-
 
     onKeyDown(event) {
         const currentTime = Date.now();  // Lấy thời gian hiện tại
+
+        // Kiểm tra nếu phím mũi tên được nhấn và thời gian giữa hai lần bấm phím mũi tên lớn hơn 200ms
         if (this.display.isPlaying() && this.fastKeys.indexOf(event.keyCode) > -1) {
             if (this.keyPressed === null) {
-                this.keyPressed = event.keyCode;
+                this.keyPressed = event.keyCode;  // Lưu lại phím được nhấn lần đầu
             } else {
-                return;  // Nếu đã nhấn phím, không làm gì thêm
+                return;  // Nếu phím đã được nhấn trước đó, không xử lý thêm
             }
-        }
 
-        // Kiểm tra nếu thời gian giữa hai lần bấm phím mũi tên phải/trái quá ngắn (dưới 200ms)
-        if (currentTime - this.lastKeyPressTime > 200) {
-            this.lastKeyPressTime = currentTime;  // Cập nhật thời gian bấm phím
-            this.pressKey(event.keyCode, event);  // Xử lý bấm phím
+            // Kiểm tra nếu thời gian giữa hai lần bấm phím mũi tên phải/trái quá ngắn (dưới 200ms)
+            if (currentTime - this.lastKeyPressTime > 200) {
+                this.lastKeyPressTime = currentTime;  // Cập nhật thời gian bấm phím
+                this.pressKey(event.keyCode, event);  // Xử lý bấm phím
+            }
         }
     }
 
