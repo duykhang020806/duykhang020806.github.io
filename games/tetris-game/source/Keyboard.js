@@ -52,8 +52,9 @@ class Keyboard {
                 key = "W";
             } else if ([37, 65].indexOf(key) > -1) {        // Left / A
                 key = "A";
-            } else if ([40, 83].indexOf(key) > -1) {        // Down / S
+            } else if ([40, 83].indexOf(key) > -1) {        // Down / S (Chức năng đặc biệt)
                 key = "S";
+                this.quickDrop();  // Gọi hàm để di chuyển xuống nhanh
             } else if ([39, 68].indexOf(key) > -1) {        // Right / D
                 key = "D";
             } else {
@@ -97,5 +98,14 @@ class Keyboard {
 
     onKeyHold() {
         // Không xử lý việc giữ phím nữa
+    }
+
+    // Hàm di chuyển vật thể xuống nhanh
+    quickDrop() {
+        console.log("Vật thể đang di chuyển xuống nhanh!");
+        // Logic di chuyển vật thể xuống nhanh ở đây
+        // Có thể là đặt vật thể xuống dưới cùng ngay lập tức hoặc di chuyển nhanh xuống
+        // Tuỳ thuộc vào cách bạn điều khiển trò chơi, ví dụ:
+        this.display.dropToBottom();
     }
 }
