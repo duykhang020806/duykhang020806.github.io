@@ -1125,6 +1125,9 @@ img {
     padding: 0 1rem;
   }
 
+  .main {
+  margin-top: 80px; /* Tăng khoảng cách giữa header và phần main */
+}
   .nav {
     height: calc(var(--header-height) + 1.5rem);
     column-gap: 1rem;
