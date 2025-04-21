@@ -1039,6 +1039,30 @@ img {
   }
 }
 
+
+/* ===========thay doi =========
+/* Áp dụng thay đổi chỉ trên các thiết bị có màn hình nhỏ */
+@media (max-width: 768px) {
+    .nav__dropdown:hover .dropdown__menu {
+        display: block;
+        bottom: 100%; /* Đưa menu lên trên */
+        top: auto;
+        margin-bottom: 5px; /* Thêm khoảng cách giữa menu và mục game */
+    }
+
+    .dropdown__menu {
+        position: absolute;
+        left: 0;
+        right: 0;
+        background-color: #fff;
+        display: none; /* Ẩn menu khi không hover */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+    }
+}
+
+
+
 /* For medium Devices */
 @media screen and (min-width: 568px) {
   .home__content {
