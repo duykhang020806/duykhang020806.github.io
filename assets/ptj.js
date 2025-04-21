@@ -13,41 +13,6 @@ if (navClose) {
   });
 }
 
-
-
-
-
-
-// =====================================KIEM TRA LINK LOI ===========================
-// Kiểm tra URL
-if (window.location.pathname !== "/" && !window.location.pathname.startsWith('/games') && !window.location.pathname.startsWith('/tep-tin')) {
-    // Chuyển hướng về trang chính
-    window.location.href = "https://mahira.top/";
-
-    // Hiển thị thông báo lỗi
-    displayErrorNotification();
-}
-
-function displayErrorNotification() {
-    // Tạo thông báo lỗi
-    const notification = document.createElement('div');
-    notification.classList.add('error-notification');
-    notification.innerHTML = `
-        <span>Ôi lỗi! Không có trang web đó</span>
-        <button class="close-notification">X</button>
-    `;
-
-    // Thêm thông báo vào body
-    document.body.appendChild(notification);
-
-    // Xử lý sự kiện đóng thông báo
-    const closeButton = notification.querySelector('.close-notification');
-    closeButton.addEventListener('click', () => {
-        notification.remove();
-    });
-}
-
-
 /*==================== REMOVE MENU MOBILE ====================*/
 const navLink = document.querySelectorAll(".nav__link");
 
