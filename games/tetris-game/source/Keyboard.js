@@ -1,6 +1,5 @@
 class Keyboard {
     constructor(display, scores, shortcuts) {
-        // Các phím mũi tên và các phím khác
         this.fastKeys   = [37, 65, 40, 83, 39, 68, 38, 87]; // Mũi tên trái (37), mũi tên lên (38), mũi tên xuống (40), mũi tên phải (39), W (87), A (65), S (83), D (68)
         this.shortcuts  = shortcuts;
         this.keyPressed = null;
@@ -104,8 +103,7 @@ class Keyboard {
     quickDrop() {
         console.log("Vật thể đang di chuyển xuống nhanh!");
         // Logic di chuyển vật thể xuống nhanh ở đây
-        // Có thể là đặt vật thể xuống dưới cùng ngay lập tức hoặc di chuyển nhanh xuống
-        // Tuỳ thuộc vào cách bạn điều khiển trò chơi, ví dụ:
-        this.display.dropToBottom();
+        // Giả sử trò chơi có hàm `movePieceDown()` để di chuyển vật thể xuống:
+        this.display.movePieceDown();  // Thay đổi với phương thức thực tế của bạn
     }
 }
