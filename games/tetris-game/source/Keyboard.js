@@ -27,7 +27,7 @@ class Keyboard {
         this.count = 0;
     }
 
-    pressKey(key, event) {
+     pressKey(key, event) {
         let number = null;
         if (this.scores.isFocused()) {
             if (key === 13) {
@@ -37,12 +37,44 @@ class Keyboard {
             if (!this.display.isPlaying()) {
                 event.preventDefault();
             }
-
-            // Đoạn mã kiểm tra các phím và gán chức năng
-            // ...
-
+            
+            if ([8, 66, 78].indexOf(key) > -1) {            // Backspace / B / N
+                key = "B";
+            } else if ([13, 79, 84].indexOf(key) > -1) {    // Enter / O / T
+                key = "O";
+            } else if ([80, 67].indexOf(key) > -1) {        // P / C
+                key = "P";
+            } else if ([17, 32].indexOf(key) > -1) {        // Ctrl / Space
+                key = "C";
+            } else if ([38, 87].indexOf(key) > -1) {        // Up    / W
+                key = "W";
+            } else if ([37, 65].indexOf(key) > -1) {        // Left  / A
+                key = "A";
+            } else if ([40, 83].indexOf(key) > -1) {        // Down  / S
+                key = "S";
+            } else if ([39, 68].indexOf(key) > -1) {        // Right / D
+                key = "D";
+            } else {
+                if (key === 48 || key === 96) {
+                    number = 10;
+                } else if (key > 48 && key < 58) {
+                    number = key - 48;
+                } else if (key > 96 && key < 106) {
+                    number = key - 96;
+                }
+                key = String.fromCharCode(key);
+            }
+            
+            if (number !== null) {
+                this.shortcuts.number(number);
+            }
+            if (this.shortcuts[this.display.get()][key]) {
+                this.shortcuts[this.display.get()][key]();
+            }
         }
     }
+    
+
 
     onKeyDown(event) {
         const currentTime = Date.now();  // Lấy thời gian hiện tại
