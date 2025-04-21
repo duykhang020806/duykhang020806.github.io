@@ -79,15 +79,10 @@ class Keyboard {
 
         // Kiểm tra nếu phím mũi tên được nhấn và thời gian giữa hai lần bấm phím mũi tên lớn hơn 200ms
         if (this.display.isPlaying() && this.fastKeys.indexOf(event.keyCode) > -1) {
-            if (this.keyPressed === null) {
-                this.keyPressed = event.keyCode;  // Lưu lại phím được nhấn lần đầu
-            } else {
-                return;  // Nếu phím đã được nhấn trước đó, không xử lý thêm
-            }
-
             // Kiểm tra nếu thời gian giữa hai lần bấm phím mũi tên phải/trái quá ngắn (dưới 200ms)
             if (currentTime - this.lastKeyPressTime > 200) {
                 this.lastKeyPressTime = currentTime;  // Cập nhật thời gian bấm phím
+                this.keyPressed = event.keyCode;  // Lưu lại phím được nhấn lần đầu
                 this.pressKey(event.keyCode, event);  // Xử lý bấm phím
             }
         }
@@ -99,8 +94,6 @@ class Keyboard {
     }
 
     onKeyHold() {
-        if (this.keyPressed !== null && this.display.isPlaying()) {
-            this.pressKey(this.keyPressed);
-        }
+        // Không xử lý việc giữ phím nữa
     }
 }
