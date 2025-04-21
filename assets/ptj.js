@@ -15,15 +15,7 @@ if (navClose) {
 
 
 
-// Lấy phần tử vòng tròn
-const circle = document.querySelector('.circle');
 
-// Lắng nghe sự kiện di chuyển chuột
-document.addEventListener('mousemove', (e) => {
-  // Di chuyển vòng tròn đến vị trí của con chuột
-  circle.style.left = `${e.pageX}px`;
-  circle.style.top = `${e.pageY}px`;
-});
 
 
 // =====================================KIEM TRA LINK LOI ===========================
