@@ -1,3 +1,6 @@
+# Notice: Ban quyen thuoc ve Phan Huu Duy Khang 
+# Lasted 30/04/2025 5:53 PM
+# Xin cam on
 User-agent: *
 Disallow: /private/
 Allow: /
