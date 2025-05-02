@@ -1307,39 +1307,35 @@ img {
 
 
 .ai-chatbot-showcase {
-  display: flex;
-  justify-content: center;
-  padding-top: 8rem;
+  margin-top: 8rem;
   margin-bottom: 2rem;
+  padding: 0 1rem;
+}
+
+.chatbot-heading {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #111;
+  text-align: left;
+  max-width: 900px;
+  margin: 0 auto 1rem auto;
 }
 
 .ai-chatbot-box {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 18px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
   padding: 1.5rem 2rem;
-  background-color: #fff;
-  border-radius: 20px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-  flex-wrap: wrap;
-}
-
-.chatbot-title {
-  font-size: 1.1rem;
-  font-weight: 600;
-  padding: 0.6rem 1.2rem;
-  background-color: #f2f2f2;
-  border-radius: 12px;
-  color: #333;
-  border: 1px solid #ddd;
-  white-space: nowrap;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .chatbot-list {
   display: flex;
   gap: 2rem;
-  flex-wrap: wrap;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .chatbot-item {
@@ -1347,7 +1343,7 @@ img {
   flex-direction: column;
   align-items: center;
   text-decoration: none;
-  color: #333;
+  color: #222;
   transition: all 0.3s ease;
 }
 
@@ -1360,7 +1356,7 @@ img {
 
 .chatbot-item span {
   font-weight: 500;
-  transition: color 0.3s;
+  transition: color 0.3s ease;
 }
 
 .chatbot-item:hover img {
@@ -1370,6 +1366,7 @@ img {
 .chatbot-item:hover span {
   color: #007bff;
 }
+
 
 
 
