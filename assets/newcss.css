@@ -348,7 +348,34 @@ img {
   box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
 }
 
+/* ====================chat bot ======================== */
 
+.chatbot-box {
+    padding: 1rem; /* Giảm padding để phù hợp với màn hình nhỏ */
+    flex-direction: column; /* Xếp theo chiều dọc */
+  }
+
+  .chatbot-col-left {
+    margin-bottom: 1rem; /* Tạo khoảng cách giữa nhãn và các mục chatbot */
+  }
+
+  .chatbot-col-right {
+    flex-direction: column; /* Sắp xếp các mục chatbot thành cột */
+    gap: 1rem; /* Khoảng cách giữa các mục chatbot */
+  }
+
+  .chatbot-item img {
+    width: 50px; /* Giảm kích thước hình ảnh */
+    height: 50px; /* Giảm kích thước hình ảnh */
+  }
+
+  .chatbot-heading {
+    font-size: 1.5rem; /* Giảm kích thước font */
+  }
+
+  .chatbot-label {
+    font-size: 1.25rem; /* Giảm kích thước font cho nhãn */
+  }
 
 /*========HOME=============*/
 .home__container {
@@ -1310,7 +1337,7 @@ img {
 }
 
   
-/*================================CHAT BOT=====================================*/
+/* ===================== Chatbot Section cho Di Động ===================== */
 .chatbot-section {
   margin-top: 8rem;
   margin-bottom: 3rem;
