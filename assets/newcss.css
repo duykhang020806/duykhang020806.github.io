@@ -1305,6 +1305,9 @@ img {
   padding-top: 10rem; /* đẩy nội dung xuống dưới header */
 }
 
+  
+/*================================CHAT BOT=====================================*/
+/* Các kiểu dáng hiện tại của bạn */
 .chatbot-section {
   margin-top: 8rem;
   margin-bottom: 3rem;
@@ -1314,14 +1317,14 @@ img {
 .chatbot-heading {
   font-size: 2rem;
   font-weight: 700;
-  color: #111;
+  color: #111; /* Màu chữ hiện tại */
   margin-bottom: 2rem;
 }
 
 .chatbot-box {
   display: flex;
-  background-color: #fff;
-  border: 1px solid #ccc;
+  background-color: #fff; /* Màu nền hiện tại */
+  border: 1px solid #ccc; /* Màu viền hiện tại */
   border-radius: 20px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
   padding: 2rem;
@@ -1330,14 +1333,6 @@ img {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-}
-
-.chatbot-col-left {
-  flex: 1;
-  min-width: 150px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .chatbot-label {
@@ -1351,46 +1346,43 @@ img {
   white-space: nowrap;
 }
 
-.chatbot-col-right {
-  flex: 3;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 3rem;
-  padding-left: 1rem;
-}
-
-.chatbot-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-decoration: none;
-  color: #222;
-  transition: all 0.3s ease;
-}
-
-.chatbot-item img {
-  width: 56px;
-  height: 56px;
-  margin-bottom: 0.4rem;
-  transition: transform 0.3s ease;
-}
-
 .chatbot-item span {
-  font-weight: 500;
+  color: #222; /* Màu chữ tên chatbot hiện tại */
   transition: color 0.3s ease;
 }
 
-.chatbot-item:hover img {
-  transform: scale(1.15);
+.chatbot-item:hover span {
+  color: #007bff; /* Màu hover hiện tại */
 }
 
-  .chatbot-section > .chatbot-box:not(:last-child) {
-  margin-bottom: 3rem; /* Điều chỉnh giá trị này theo khoảng cách bạn mong muốn */
+/* ... Các kiểu dáng khác của bạn ... */
+
+/* Kiểu dáng cho chế độ nền tối */
+body.dark-theme {
+  background-color: #181818; /* Màu nền tối */
+  color: #f0f0f0; /* Màu chữ mặc định cho toàn trang */
 }
-  
-.chatbot-item:hover span {
-  color: #007bff;
+
+body.dark-theme .chatbot-heading {
+  color: #007bff; /* Màu xanh biển cho tiêu đề */
+}
+
+body.dark-theme .chatbot-box {
+  background-color: #222; /* Màu nền tối cho khối chatbot */
+  border: 1px solid #007bff; /* Màu viền xanh biển cho khối chatbot */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Bóng đổ tối hơn */
+}
+
+body.dark-theme .chatbot-label {
+  color: #007bff; /* Màu xanh biển cho chữ "AI Chatbot" và "Writing code" */
+}
+
+body.dark-theme .chatbot-item span {
+  color: #f0f0f0; /* Màu chữ trắng/xám nhạt cho tên chatbot */
+}
+
+body.dark-theme .chatbot-item:hover span {
+  color: #007bff; /* Giữ nguyên màu hover là xanh biển */
 }
 
 
