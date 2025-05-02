@@ -994,119 +994,77 @@ img {
 /* For Small Devices */
 @media screen and (max-width: 767px) {
   .container {
-    margin-left: var(--mb-1);  /* Giảm margin để dễ nhìn hơn trên điện thoại */
+    margin-left: var(--mb-1);
     margin-right: var(--mb-1);
   }
 
-  /* Thay đổi kiểu hiển thị của menu */
   .nav__menu {
-    padding: 2rem 0.5rem 4rem; /* Tăng thêm padding cho menu */
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: var(--body-color);
-    box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 1.5rem 1.5rem 0 0;
-    transition: 0.3s;
+    padding: 2rem 0.25rem 4rem;
   }
 
-  /* Thay đổi cách bố trí của các mục trong menu */
   .nav__list {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;  /* Giảm khoảng cách giữa các mục */
+    column-gap: 0;
   }
 
-  .nav__link {
-    font-size: var(--small-font-size); /* Điều chỉnh kích thước font cho phù hợp */
-  }
-
-  .nav__toggle {
-    font-size: 1.5rem;
-  }
-
-  /* Các mục trong phần home */
   .home__content {
-    grid-template-columns: 1fr;  /* Sử dụng một cột cho giao diện trên điện thoại */
-    padding-top: 3.5rem;
-    gap: 1rem;
+    grid-template-columns: 0.25fr 3fr;
   }
 
   .home__blob {
-    width: 150px;  /* Giảm kích thước blob cho điện thoại */
+    width: 180px;
   }
 
-  /* Các phần tử chatbot */
-  .chatbot-box {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
+  .skills__icon,
+  .skills__arrow {
+    font-size: 1.25rem;
+  }
+  .skills__title {
+    font-size: var(--normal-font-size);
+  }
+
+  .qualification__data {
+    gap: 0.5rem;
+  }
+
+  .services__container {
     justify-content: center;
-    margin: 0 auto;
   }
 
-  .chatbot-col-left, .chatbot-col-right {
-    flex: 1;
-    min-width: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .services__content {
+    padding-right: 0.5rem;
   }
 
-  .chatbot-item {
-    width: 100%;
-    text-align: center;
+  .services__modal {
+    padding: 0 0.5rem;
   }
 
-  .chatbot-item img {
-    width: 56px;
-    height: 56px;
+  .project__img {
+    width: 200px;
   }
 
-  /* Sửa phần Footer */
-  .footer__container {
-    grid-template-columns: 1fr;  /* Thay đổi layout footer thành cột */
-    text-align: center;
-  }
-
-  .footer__socials {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-  }
-
-  .footer__copy {
-    margin-top: 3rem;
-  }
-
-  /* Scroll up button */
-  .scrollup {
-    bottom: 5rem;  /* Hiển thị nút lên trên */
-  }
+  
 }
-
 
 
 /* ===========thay doi =========
 /* Áp dụng thay đổi chỉ trên các thiết bị có màn hình nhỏ */
 @media (max-width: 768px) {
-  .nav__dropdown:hover .dropdown__menu {
-    display: block;
-    bottom: 100%; /* Đưa menu lên trên */
-    top: auto;
-    margin-bottom: 5px; /* Thêm khoảng cách giữa menu và mục game */
-  }
+    .nav__dropdown:hover .dropdown__menu {
+        display: block;
+        bottom: 100%; /* Đưa menu lên trên */
+        top: auto;
+        margin-bottom: 5px; /* Thêm khoảng cách giữa menu và mục game */
+    }
 
-  .dropdown__menu {
-    position: absolute;
-    left: 0;
-    right: 0;
-    background-color: #fff;
-    display: none;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-  }
+    .dropdown__menu {
+        position: absolute;
+        left: 0;
+        right: 0;
+        background-color: #fff;
+        display: none; /* Ẩn menu khi không hover */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+    }
 }
 
 
@@ -1114,15 +1072,30 @@ img {
 /* For medium Devices */
 @media screen and (min-width: 568px) {
   .home__content {
-    grid-template-columns: max-content 1fr; /* Chuyển thành 2 cột cho các màn hình vừa */
+    grid-template-columns: max-content 1fr 1fr;
   }
 
+  .home__data {
+    grid-column: initial;
+  }
+
+  .home__img {
+    order: 1;
+    justify-self: center;
+  }
+
+  .about__container,
+  .skills__container,
+  .project__container,
+  .contact__container,
   .footer__container {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  .about__container, .skills__container, .services_container {
-    grid-template-columns: repeat(2, 1fr); /* Chia thành 2 cột cho các phần này */
+  .qualification__section {
+    display: grid;
+    grid-template-columns: 0.6fr;
+    justify-content: center;
   }
 }
 
@@ -1298,7 +1271,9 @@ img {
 /* For large devices */
 
 @media screen and (min-width: 968px) {
-  .header, .footer__container {
+  .header,
+  .main,
+  .footer__container {
     padding: 0;
   }
 
@@ -1306,14 +1281,34 @@ img {
     width: 280px;
   }
 
-  .footer__container {
-    grid-template-columns: repeat(3, 1fr); /* 3 cột cho footer */
+  .home__title {
+    font-size: 37px;
   }
 
-  .footer__socials {
-    justify-self: flex-end;
+  .home__social {
+    transform: translateX(-6rem);
   }
+
+  .button--white {
+    bottom: -4.5rem;
+  }
+
+  html, body {
+  height: 100%;
 }
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.main {
+  flex: 1;
+}
+
+  .main {
+  padding-top: 10rem; /* đẩy nội dung xuống dưới header */
+}
+
   
 /*================================CHAT BOT=====================================*/
 .chatbot-section {
