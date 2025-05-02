@@ -989,19 +989,21 @@ img {
   background-color: var(--text-color-light);
 }
 
-/* ================== Các điều chỉnh cho điện thoại (max-width: 767px) ================== */
+/*======================== Media Queries ======================*/
+
 @media screen and (max-width: 767px) {
-  
-  /* Thay đổi kích thước container cho phù hợp */
   .container {
     margin-left: var(--mb-1);
     margin-right: var(--mb-1);
   }
 
-  /* Điều chỉnh menu */
+  .nav {
+    height: var(--header-height); /* Đảm bảo chiều cao header phù hợp */
+  }
+
   .nav__menu {
     position: fixed;
-    bottom: 0;
+    bottom: -100%;
     left: 0;
     width: 100%;
     background-color: var(--body-color);
@@ -1011,140 +1013,129 @@ img {
     transition: 0.3s;
   }
 
-  /* Cải thiện cách sắp xếp các mục menu */
   .nav__list {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    padding-left: 0;
-    padding-right: 0;
+    display: grid; /* Chuyển sang grid layout cho menu dọc */
+    grid-template-columns: 1fr; /* Một cột duy nhất */
+    gap: 1.5rem; /* Tăng khoảng cách giữa các mục menu */
   }
 
-  /* Menu dropdown */
-  .nav__dropdown:hover .dropdown__menu {
-    display: block;
-    bottom: 100%; /* Đưa menu lên trên */
-    top: auto;
-    margin-bottom: 5px;
+  .nav__item {
+    /* Không cần thêm style đặc biệt ở đây nếu .nav__link đã được style */
   }
 
-  .dropdown__menu {
-    position: absolute;
-    left: 0;
-    right: 0;
-    background-color: #fff;
-    display: none;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
+  .nav__link {
+    display: block; /* Đảm bảo mỗi link chiếm toàn bộ chiều rộng */
+    text-align: center; /* Căn giữa các link */
   }
 
-  /* Điều chỉnh các phần tử trong Home */
+  .nav__icon {
+    font-size: 1.5rem; /* Tăng kích thước icon cho dễ nhìn */
+    margin-bottom: 0.5rem; /* Thêm khoảng cách giữa icon và text */
+  }
+
+  .nav__toggle {
+    display: block; /* Hiển thị nút hamburger */
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  .nav__close {
+    display: block; /* Đảm bảo nút đóng hiển thị */
+  }
+
+  .show-menu {
+    bottom: 0; /* Hiển thị menu khi có class .show-menu */
+  }
+
   .home__content {
-    grid-template-columns: 1fr;  /* Sử dụng một cột */
-    gap: 1rem;
-    padding-top: 4rem;
+    grid-template-columns: 1fr; /* Chuyển sang một cột */
+    padding-top: 2rem; /* Điều chỉnh padding */
+    text-align: center; /* Căn giữa nội dung */
+  }
+
+  .home__social {
+    display: flex; /* Hiển thị các icon mạng xã hội theo hàng ngang */
+    justify-content: center; /* Căn giữa các icon */
+    margin-bottom: 1rem; /* Thêm khoảng cách */
   }
 
   .home__blob {
-    width: 180px;  /* Giảm kích thước blob cho điện thoại */
+    width: 180px; /* Điều chỉnh kích thước blob */
   }
 
-  /* Điều chỉnh hình ảnh và font-size */
-  .home__title {
-    font-size: var(--big-font-size);
+  .home__data {
+    grid-column: 1; /* Đảm bảo data chiếm một cột */
   }
 
-  .home__subtitle {
-    font-size: var(--h3-font-size);
+  .about__container,
+  .skills__container,
+  .project__container,
+  .contact__container,
+  .footer__container {
+    grid-template-columns: 1fr; /* Chuyển sang một cột */
   }
 
-  .home__description {
-    margin-bottom: var(--mb-2);
+  .about__img {
+    width: 150px; /* Điều chỉnh kích thước ảnh about */
+    margin: 0 auto 1.5rem; /* Căn giữa và thêm khoảng cách */
   }
 
-  .portfolio__scroll {
-    margin-top: 15px;
-    display: flex;
-    justify-content: center;
+  .about__info {
+    flex-direction: column; /* Chuyển thông tin about sang dạng cột */
+    align-items: center; /* Căn giữa các mục thông tin */
   }
 
-  .home__scroll {
-    display: block;
+  .services_container {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Bố cục linh hoạt cho các dịch vụ */
   }
 
-  .home__scroll-button {
-    margin-left: 3rem;
+  .portfolio__content {
+    padding: 0 1rem; /* Điều chỉnh padding cho portfolio */
   }
 
-  /* Các phần tử buttons */
-  .button {
-    padding: 1rem;
-    font-size: var(--normal-font-size);
+  .portfolio__img {
+    width: 100%; /* Hình ảnh portfolio chiếm toàn bộ chiều rộng */
+    height: auto;
   }
 
-  /* Giao diện Chatbot */
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none; /* Ẩn nút điều hướng swiper trên mobile (có thể vuốt) */
+  }
+
   .chatbot-box {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    justify-content: center;
-    margin: 0 auto;
+    flex-direction: column; /* Chuyển chatbot box sang dạng cột */
+    align-items: stretch; /* Kéo dài các cột cho vừa chiều rộng */
+    padding: 1.5rem; /* Điều chỉnh padding */
   }
 
-  .chatbot-col-left, .chatbot-col-right {
-    flex: 1;
-    min-width: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .chatbot-col-left,
+  .chatbot-col-right {
+    flex: 1; /* Chia đều không gian */
+    width: 100%; /* Chiếm toàn bộ chiều rộng */
+    padding-left: 0; /* Loại bỏ padding trái */
+    margin-bottom: 1rem; /* Thêm khoảng cách giữa các cột */
+    text-align: center; /* Căn giữa nội dung */
+  }
+
+  .chatbot-col-right {
+    flex-direction: row; /* Hiển thị item theo hàng ngang trên mobile nếu đủ chỗ */
+    justify-content: center; /* Căn giữa các item */
+    gap: 1rem; /* Giảm khoảng cách giữa các item */
   }
 
   .chatbot-item {
-    width: 100%;
-    text-align: center;
+    width: auto; /* Để item tự điều chỉnh kích thước */
   }
 
   .chatbot-item img {
-    width: 56px;
-    height: 56px;
+    width: 48px; /* Giảm kích thước icon chatbot */
+    height: 48px;
+    margin-bottom: 0.2rem;
   }
 
-  /* Footer chỉnh sửa */
-  .footer__container {
-    grid-template-columns: 1fr;  /* Chuyển footer thành 1 cột */
-    text-align: center;
-    gap: 1rem;
-  }
-
-  .footer__socials {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-  }
-
-  .footer__copy {
-    margin-top: 3rem;
-  }
-
-  /* Scroll up button */
-  .scrollup {
-    bottom: 5rem;
-  }
-
-  /* Các phần tử khác */
-  .about__container,
-  .skills__container,
-  .services_container {
-    grid-template-columns: 1fr;
-  }
-
-  .services__content {
-    padding: 2rem 0 1rem;
-  }
-
-  .services__modal-content {
-    width: 100%;
-    padding: 1.5rem;
+  .chatbot-label {
+    font-size: 1.2rem; /* Giảm kích thước label chatbot */
   }
 }
 
