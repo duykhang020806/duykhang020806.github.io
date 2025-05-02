@@ -989,60 +989,163 @@ img {
   background-color: var(--text-color-light);
 }
 
-/*======================== Media Queries ======================*/
-
-/* For Small Devices */
+/* ================== Các điều chỉnh cho điện thoại (max-width: 767px) ================== */
 @media screen and (max-width: 767px) {
+  
+  /* Thay đổi kích thước container cho phù hợp */
   .container {
     margin-left: var(--mb-1);
     margin-right: var(--mb-1);
   }
 
+  /* Điều chỉnh menu */
   .nav__menu {
-    padding: 2rem 0.25rem 4rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--body-color);
+    padding: 2rem 1.5rem 4rem;
+    box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 1.5rem 1.5rem 0 0;
+    transition: 0.3s;
   }
 
+  /* Cải thiện cách sắp xếp các mục menu */
   .nav__list {
-    column-gap: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-left: 0;
+    padding-right: 0;
   }
 
+  /* Menu dropdown */
+  .nav__dropdown:hover .dropdown__menu {
+    display: block;
+    bottom: 100%; /* Đưa menu lên trên */
+    top: auto;
+    margin-bottom: 5px;
+  }
+
+  .dropdown__menu {
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    display: none;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+  }
+
+  /* Điều chỉnh các phần tử trong Home */
   .home__content {
-    grid-template-columns: 0.25fr 3fr;
+    grid-template-columns: 1fr;  /* Sử dụng một cột */
+    gap: 1rem;
+    padding-top: 4rem;
   }
 
   .home__blob {
-    width: 180px;
+    width: 180px;  /* Giảm kích thước blob cho điện thoại */
   }
 
-  .skills__icon,
-  .skills__arrow {
-    font-size: 1.25rem;
-  }
-  .skills__title {
-    font-size: var(--normal-font-size);
+  /* Điều chỉnh hình ảnh và font-size */
+  .home__title {
+    font-size: var(--big-font-size);
   }
 
-  .qualification__data {
-    gap: 0.5rem;
+  .home__subtitle {
+    font-size: var(--h3-font-size);
   }
 
-  .services__container {
+  .home__description {
+    margin-bottom: var(--mb-2);
+  }
+
+  .portfolio__scroll {
+    margin-top: 15px;
+    display: flex;
     justify-content: center;
   }
 
+  .home__scroll {
+    display: block;
+  }
+
+  .home__scroll-button {
+    margin-left: 3rem;
+  }
+
+  /* Các phần tử buttons */
+  .button {
+    padding: 1rem;
+    font-size: var(--normal-font-size);
+  }
+
+  /* Giao diện Chatbot */
+  .chatbot-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .chatbot-col-left, .chatbot-col-right {
+    flex: 1;
+    min-width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .chatbot-item {
+    width: 100%;
+    text-align: center;
+  }
+
+  .chatbot-item img {
+    width: 56px;
+    height: 56px;
+  }
+
+  /* Footer chỉnh sửa */
+  .footer__container {
+    grid-template-columns: 1fr;  /* Chuyển footer thành 1 cột */
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .footer__socials {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .footer__copy {
+    margin-top: 3rem;
+  }
+
+  /* Scroll up button */
+  .scrollup {
+    bottom: 5rem;
+  }
+
+  /* Các phần tử khác */
+  .about__container,
+  .skills__container,
+  .services_container {
+    grid-template-columns: 1fr;
+  }
+
   .services__content {
-    padding-right: 0.5rem;
+    padding: 2rem 0 1rem;
   }
 
-  .services__modal {
-    padding: 0 0.5rem;
+  .services__modal-content {
+    width: 100%;
+    padding: 1.5rem;
   }
-
-  .project__img {
-    width: 200px;
-  }
-
-  
 }
 
 
