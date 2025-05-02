@@ -1385,6 +1385,10 @@ img {
   transform: scale(1.15);
 }
 
+  .chatbot-section > .chatbot-box:not(:last-child) {
+  margin-bottom: 3rem; /* Điều chỉnh giá trị này theo khoảng cách bạn mong muốn */
+}
+  
 .chatbot-item:hover span {
   color: #007bff;
 }
