@@ -1314,6 +1314,10 @@ img {
   text-align: center;
 }
 
+.chatbot-section > .chatbot-box:nth-child(2) {
+  margin-top: 2rem; /* Hoặc một giá trị bạn muốn */
+}
+  
 .chatbot-heading {
   font-size: 2rem;
   font-weight: 700;
