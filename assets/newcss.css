@@ -1305,10 +1305,9 @@ img {
   padding-top: 10rem; /* đẩy nội dung xuống dưới header */
 }
 
-
 .chatbot-section {
   margin-top: 8rem;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   text-align: center;
 }
 
@@ -1322,35 +1321,35 @@ img {
 .chatbot-box {
   display: flex;
   align-items: center;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 18px;
-  padding: 1.5rem 2rem;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
-  gap: 2rem;
-  flex-wrap: wrap;
   justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 20px;
   max-width: 1000px;
   margin: 0 auto;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
 }
 
 .chatbot-label {
-  font-weight: 600;
   font-size: 1.2rem;
-  color: #222;
-  white-space: nowrap;
-  padding: 0.6rem 1.2rem;
-  background-color: #f5f5f5;
+  font-weight: 600;
+  padding: 0.75rem 1.25rem;
+  background: #f0f0f0;
   border: 1px solid #ddd;
   border-radius: 12px;
+  color: #222;
+  white-space: nowrap;
 }
 
 .chatbot-list {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
-  justify-content: center;
   flex: 1;
+  justify-content: center;
 }
 
 .chatbot-item {
@@ -1381,8 +1380,6 @@ img {
 .chatbot-item:hover span {
   color: #007bff;
 }
-
-
 
 
 
