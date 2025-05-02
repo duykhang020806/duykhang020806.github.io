@@ -348,33 +348,30 @@ img {
   box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
 }
 
-/* ====================chat bot ======================== */
+/* ====================chat bot dt ======================== */
 
-.chatbot-box {
-    padding: 1rem; /* Giảm padding để phù hợp với màn hình nhỏ */
-    flex-direction: column; /* Sắp xếp các phần tử chatbot thành cột */
-  }
-
-  .chatbot-col-left {
-    margin-bottom: 1rem; /* Tạo khoảng cách giữa nhãn và các mục chatbot */
+ .chatbot-box {
+    padding: 1rem;
+    flex-direction: column; /* Xếp các mục chatbot theo cột trên di động */
+    align-items: center;
   }
 
   .chatbot-col-right {
-    flex-direction: column; /* Sắp xếp các mục chatbot thành cột */
-    gap: 1rem; /* Khoảng cách giữa các mục chatbot */
+    flex-direction: column; /* Chuyển thành cột khi trên di động */
+    gap: 1rem;
   }
 
   .chatbot-item img {
-    width: 50px; /* Giảm kích thước hình ảnh */
-    height: 50px; /* Giảm kích thước hình ảnh */
+    width: 50px;
+    height: 50px;
   }
 
   .chatbot-heading {
-    font-size: 1.5rem; /* Giảm kích thước font */
+    font-size: 1.5rem;
   }
 
   .chatbot-label {
-    font-size: 1.25rem; /* Giảm kích thước font cho nhãn */
+    font-size: 1.25rem;
   }
 
 /*========HOME=============*/
