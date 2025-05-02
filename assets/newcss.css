@@ -1343,13 +1343,13 @@ img {
 }
 
 .chatbot-label {
-  font-size: 1.5rem; /* Kích thước chữ lớn hơn */
-  font-weight: bold; /* Chữ đậm */
-  padding: 0.5rem 1rem; /* Khoảng cách đệm nhỏ hơn */
-  background: transparent; /* Nền trong suốt */
-  border: none; /* Không có đường viền */
-  border-radius: 0; /* Góc không bo tròn */
-  color: #000; /* Màu đen */
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  color: #000;
   white-space: nowrap;
 }
 
@@ -1392,9 +1392,35 @@ img {
 }
 
 .chatbot-section > .chatbot-box:not(:last-child) {
-  margin-bottom: 2rem; /* Điều chỉnh giá trị này theo khoảng cách bạn mong muốn */
+  margin-bottom: 2rem;
 }
 
+body.dark-theme {
+  background-color: #181818;
+  color: #f0f0f0;
+}
+
+body.dark-theme .chatbot-heading {
+  color: #007bff;
+}
+
+body.dark-theme .chatbot-box {
+  background-color: #222;
+  border: 1px solid #007bff;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-theme .chatbot-label {
+  color: #007bff;
+}
+
+body.dark-theme .chatbot-item span {
+  color: #f0f0f0;
+}
+
+body.dark-theme .chatbot-item:hover span {
+  color: #007bff;
+}
 
   
 }
