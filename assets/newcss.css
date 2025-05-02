@@ -1301,6 +1301,44 @@ img {
   flex: 1;
 }
 
+.ai-chatbot-box {
+  border: 2px solid #ccc;
+  border-radius: 20px;
+  padding: 1rem 1.5rem;
+  display: inline-block;
+  background: #fff;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.ai-chatbot-box h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.bot-icons {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.bot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.bot img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  margin-bottom: 0.4rem;
+}
 
   
 }
