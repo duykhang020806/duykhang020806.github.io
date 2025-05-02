@@ -1282,30 +1282,6 @@ img {
   .footer__copy {
     margin-top: 4.5rem;
   }
-
-/*========================chat bot pc====================*/
- .chatbot-box {
-    padding: 2rem;
-    flex-direction: row; /* Đảm bảo hiển thị theo dạng hàng ngang trên máy tính */
-  }
-
-  .chatbot-col-left {
-    margin-right: 2rem; /* Tạo khoảng cách giữa nhãn và các mục chatbot */
-  }
-
-  .chatbot-item img {
-    width: 64px; /* Tăng kích thước hình ảnh trên máy tính */
-    height: 64px; /* Tăng kích thước hình ảnh trên máy tính */
-  }
-
-  .chatbot-heading {
-    font-size: 2rem; /* Đặt lại kích thước font cho máy tính */
-  }
-
-  .chatbot-label {
-    font-size: 1.5rem; /* Đặt lại kích thước font cho nhãn */
-  }
-
   
 }
 
