@@ -348,6 +348,44 @@ img {
   box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
 }
 
+/*=================dien thoai============================*/
+  .chatbot-box {
+    flex-direction: column; /* Chuyển thành cột để "AI Chatbot" ở trên */
+    align-items: flex-start; /* Căn trái nội dung bên trong */
+  }
+
+  .chatbot-col-left {
+    width: 100%; /* Chiếm toàn bộ chiều rộng */
+    margin-bottom: 1rem; /* Tạo khoảng cách với phần bên dưới */
+  }
+
+  .chatbot-col-right {
+    width: 100%; /* Chiếm toàn bộ chiều rộng */
+    display: grid; /* Sử dụng grid layout cho các biểu tượng */
+    grid-template-columns: repeat(2, 1fr); /* Tạo 2 cột */
+    gap: 1rem; /* Khoảng cách giữa các biểu tượng */
+    padding-left: 0; /* Loại bỏ padding bên trái */
+  }
+
+  .chatbot-item {
+    flex-direction: column; /* Sắp xếp biểu tượng và tên theo cột */
+    align-items: center; /* Căn giữa biểu tượng và tên */
+    text-align: center; /* Căn giữa tên */
+    border-bottom: none; /* Loại bỏ đường kẻ ngang */
+    padding: 0.5rem; /* Thêm padding xung quanh mỗi item */
+  }
+
+  .chatbot-item img {
+    width: 40px; /* Kích thước biểu tượng */
+    height: 40px; /* Kích thước biểu tượng */
+    margin-right: 0; /* Loại bỏ margin phải */
+    margin-bottom: 0.5rem; /* Tạo khoảng cách giữa biểu tượng và tên */
+  }
+
+  .chatbot-item span {
+    font-size: 0.8rem; /* Kích thước tên */
+  }
+
 /*========HOME=============*/
 .home__container {
   gap: 1rem;
@@ -1040,43 +1078,7 @@ img {
     width: 200px;
   }
 
-  /*=================dien thoai============================*/
-  .chatbot-box {
-    flex-direction: column; /* Chuyển thành cột để "AI Chatbot" ở trên */
-    align-items: flex-start; /* Căn trái nội dung bên trong */
-  }
-
-  .chatbot-col-left {
-    width: 100%; /* Chiếm toàn bộ chiều rộng */
-    margin-bottom: 1rem; /* Tạo khoảng cách với phần bên dưới */
-  }
-
-  .chatbot-col-right {
-    width: 100%; /* Chiếm toàn bộ chiều rộng */
-    display: grid; /* Sử dụng grid layout cho các biểu tượng */
-    grid-template-columns: repeat(2, 1fr); /* Tạo 2 cột */
-    gap: 1rem; /* Khoảng cách giữa các biểu tượng */
-    padding-left: 0; /* Loại bỏ padding bên trái */
-  }
-
-  .chatbot-item {
-    flex-direction: column; /* Sắp xếp biểu tượng và tên theo cột */
-    align-items: center; /* Căn giữa biểu tượng và tên */
-    text-align: center; /* Căn giữa tên */
-    border-bottom: none; /* Loại bỏ đường kẻ ngang */
-    padding: 0.5rem; /* Thêm padding xung quanh mỗi item */
-  }
-
-  .chatbot-item img {
-    width: 40px; /* Kích thước biểu tượng */
-    height: 40px; /* Kích thước biểu tượng */
-    margin-right: 0; /* Loại bỏ margin phải */
-    margin-bottom: 0.5rem; /* Tạo khoảng cách giữa biểu tượng và tên */
-  }
-
-  .chatbot-item span {
-    font-size: 0.8rem; /* Kích thước tên */
-  }
+  
 }
 
 
