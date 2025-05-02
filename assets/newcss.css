@@ -990,7 +990,7 @@ img {
 /*======================== Media Queries ======================*/
 
 /* For Small Devices */
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 767px) {
   .container {
     margin-left: var(--mb-1);
     margin-right: var(--mb-1);
@@ -1038,6 +1038,60 @@ img {
 
   .project__img {
     width: 200px;
+  }
+
+  /*=================dien thoai============================*/
+  .chatbot-section {
+    margin-top: 6rem;
+    margin-bottom: 2rem;
+  }
+
+  .chatbot-heading {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .chatbot-box {
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+  }
+
+  .chatbot-col-left {
+    width: 100%;
+    margin-bottom: 1rem;
+    justify-content: center;
+  }
+
+  .chatbot-label {
+    font-size: 1.2rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 8px;
+  }
+
+  .chatbot-col-right {
+    width: 100%;
+    padding-left: 0;
+    gap: 1.5rem;
+    justify-content: center;
+  }
+
+  .chatbot-item {
+    width: calc(50% - 0.75rem);
+  }
+
+  .chatbot-item img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 0.2rem;
+  }
+
+  .chatbot-item span {
+    font-size: 0.85rem;
+  }
+
+  .chatbot-section > .chatbot-box:not(:last-child) {
+    margin-bottom: 1.5rem;
   }
 }
 
