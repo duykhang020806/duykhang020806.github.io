@@ -1337,7 +1337,7 @@ img {
 }
 
   
-/* ===================== Chatbot Section cho Di Động ===================== */
+/* ===================== Phần Chatbot ===================== */
 .chatbot-section {
   margin-top: 8rem;
   margin-bottom: 3rem;
@@ -1426,6 +1426,7 @@ img {
   margin-bottom: 2rem;
 }
 
+/* Dark theme styles */
 body.dark-theme {
   background-color: #181818;
   color: #f0f0f0;
