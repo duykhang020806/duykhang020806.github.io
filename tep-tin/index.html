@@ -4,63 +4,80 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tệp tin - Mahira.top</title>
-    <link rel="stylesheet" href="../assets/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="../assets/newcss.css" />
-    <link
-      rel="stylesheet"
-      href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
-    />
-    <link rel="icon" href="../assets/img/icon.png" type="image/png" />
-    <style>
-      .file-title {
-        text-align: center;
-        font-size: 48px;
-        font-weight: bold;
-        margin-top: 2rem;
-        margin-bottom: 1rem;
-      }
-      .file-list {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 24px;
-        padding: 40px;
-        text-align: center;
-      }
-      .file-item {
-        font-size: 22px;
-        font-weight: bold;
-        letter-spacing: 1px;
-      }
-      .file-link {
-        color: black;
-        font-weight: bold;
-        text-decoration: none;
-        margin-left: 10px;
-      }
-    </style>
-     <meta name="description" content="Phan Hữu Duy Khang - Mahira - Tệp tin.">
-    <meta property="og:image" content="../assets/img/avt-web.png" />
+    <title>Tệp Tin - Mahira.top</title>
+    <meta name="description" content="Phan Hữu Duy Khang Mahira.top - Tệp Tin" />
+
+    <!-- Preload CSS and Fonts -->
+    <link rel="preload" href="assets/newcss.css" as="style" />
+    <link rel="stylesheet" href="assets/newcss.css" />
+    <link rel="preload" href="/assets/fonts/YourFont.woff2" as="font" type="font/woff2" crossorigin />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://mahira.top/" />
+    <meta property="og:title" content="Mahira.top – Frontend Dev & Games" />
+    <meta property="og:description" content="Phan Hữu Duy Khang - Portfolio, games và liên hệ." />
+    <meta property="og:image" content="https://mahira.top/assets/img/avt-web.png" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@mahiruu._." />
+    <meta name="twitter:title" content="Mahira.top – Frontend Dev & Games" />
+    <meta name="twitter:description" content="Phan Hữu Duy Khang - Portfolio, games và liên hệ." />
+    <meta name="twitter:image" content="https://mahira.top/assets/img/avt-web.png" />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Phan Hữu Duy Khang",
+      "url": "https://mahira.top/",
+      "image": "https://mahira.top/assets/img/avt-web.png",
+      "jobTitle": "Frontend Developer",
+      "sameAs": [
+        "https://github.com/duykhang020806",
+        "https://www.facebook.com/phanhuuduykhang/"
+      ]
+    }
+    </script>
+
+    <link rel="stylesheet" href="assets/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" />
+
+    <!-- Favicon & Manifest -->
+    <link rel="icon" href="assets/img/icon.png" type="image/png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+   <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PL6JD7JG');</script>
+  <!-- End Google Tag Manager -->
   </head>
+
   <body oncontextmenu="return false">
-    <div class="wrapper"> 
-      <header class="header" id="header">
-        <nav class="nav container">
-          <a href="https://mahira.top" class="nav__logo">DuyKhang</a>
-          <div class="nav__menu" id="nav-menu">
-            <ul class="nav__list grid">
-              <li class="nav__item">
-                <a href="https://mahira.top" class="nav__link active-link">
-                  <i class="uil uil-estate nav__icon"></i>Home
-                </a> 
-              </li>
-              <li class="nav__item nav__dropdown">
-                <a href="https://mahira.top/#games" class="nav__link">      
-                  <i class="uil uil-game-structure nav__icon"></i>Games
-                  <i class="uil uil-angle-down nav__icon dropdown__arrow"></i>
-                </a>
-                <ul class="dropdown__menu">
+    <header class="header" id="header">
+      <nav class="nav container">
+        <a href="#" class="nav__logo">DuyKhang</a>
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list grid">
+            <li class="nav__item">
+              <a href="#home" class="nav__link active-link">
+                <i class="uil uil-estate nav__icon"></i>Home
+              </a> 
+            </li>
+            
+          <!--- =====================================GAMES====================================-->
+           <li class="nav__item nav__dropdown">
+            <a href="https://mahira.top/#games" class="nav__link">      
+             <i class="uil uil-game-structure nav__icon"></i>Games
+             <i class="uil uil-angle-down nav__icon dropdown__arrow"></i>
+             </a>
+          <ul class="dropdown__menu">
              <li><a href="games/tic-tac-toe" target="_blank" class="dropdown__item">Tic Tac Toe</a></li>
              <li><a href="games/flappy-bird" target="_blank" class="dropdown__item">Flappy Bird</a></li>
              <li><a href="games/keo-bua-bao" target="_blank" class="dropdown__item">Kéo Búa Bao</a></li>
@@ -75,44 +92,55 @@
              <li><a href="games/vs-soccer-game" target="_blank" class="dropdown__item">Đá Bóng</a></li>
              <li><a href="games/ban-sung-don-gian" target="_blank" class="dropdown__item">Hậu Vệ Nha Khoa</a></li>
            </ul>
-              </li>
-              <li class="nav__item nav__dropdown">
-                <a href="https://mahira.top/tep-tin" class="nav__link">
-                  <i class="uil uil-file-alt nav__icon"></i>Tệp Tin
-                  <i class="uil uil-angle-down nav__icon dropdown__arrow"></i>
-                </a>
-                <ul class="dropdown__menu">
-                  <li><a href="https://vps.mahira.top" class="dropdown__item">VPS Của Tôi</a></li>
-                  <li><a href="https://www.mediafire.com/folder/4w8qzwqjohwyr/Mahira.top" class="dropdown__item">Mediafire</a></li>
-                </ul>
-              </li>
-              <li class="nav__item">
-                <a href="https://mahira.top/ghi-chu" class="nav__link">
-                  <i class="uil uil-briefcase-alt nav__icon"></i>Ghi Chú
-                </a>
-              </li>
-              <li class="nav__item">
-                <a href="https://duykhang020806.github.io/projects" class="nav__link" target="_blank">
-                  <i class="uil uil-scenery nav__icon"></i>Projects
-                </a>
-              </li>
-              <li class="nav__item">
-                <a href="https://mahira.top/#contact" class="nav__link">
-                  <i class="uil uil-message nav__icon"></i>Liên Hệ
-                </a>
-              </li>
-            </ul>
-            <i class="uil uil-times nav__close" id="nav-close"></i>
-          </div>
-          <div class="nav__btns">
-            <i class="uil uil-moon change-theme" id="theme-button"></i>
-            <div class="nav__toggle" id="nav-toggle">
-              <i class="uil uil-apps"></i>
-            </div>
-          </div>
-        </nav>
-      </header>
+            </li>
 
+            
+            <li class="nav__item nav__dropdown">
+      <a href="https://mahira.top/tep-tin" class="nav__link">
+        <i class="uil uil-file-alt nav__icon"></i>Tệp Tin
+        <i class="uil uil-angle-down nav__icon dropdown__arrow"></i>
+      </a>
+      <ul class="dropdown__menu">
+       <li><a href="https://id.mahira.top" class="dropdown__item">VPS Của Tôi</a></li>
+        <li><a href="https://www.mediafire.com/folder/4w8qzwqjohwyr/Mahira.top" class="dropdown__item">Mediafire</a></li>
+      </ul>
+    </li>
+            <li class="nav__item">
+                <a href="https://mahira.top/chatbot" class="nav__link">
+                  <i class="uil uil-briefcase-alt nav__icon"></i>Chatbot AI
+                </a>
+              </li>
+            <li class="nav__item">
+               <a href="https://duykhang020806.github.io/projects" class="nav__link" target="_blank">
+                <i class="uil uil-scenery nav__icon"></i>Projects
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#contact" class="nav__link">
+                <i class="uil uil-message nav__icon"></i>Liên Hệ
+              </a>
+            </li>
+          </ul>
+          <i class="uil uil-times nav__close" id="nav-close"></i>
+        </div>
+        <div class="nav__btns">
+          <!-- Theme change button -->
+          <i class="uil uil-moon change-theme" id="theme-button"></i>
+
+          <div class="nav__toggle" id="nav-toggle">
+            <i class="uil uil-apps"></i>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- main-->
+
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PL6JD7JG"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+    
+      <!--========================= Home =====================-->
       <main class="main">
         <div class="file-title">Tệp tin</div>
         <section class="file-list">
