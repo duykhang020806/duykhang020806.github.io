@@ -348,31 +348,7 @@ img {
   box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
 }
 
-/* ====================chat bot dt ======================== */
 
- .chatbot-box {
-    padding: 1rem;
-    flex-direction: column; /* Xếp các mục chatbot theo cột trên di động */
-    align-items: center;
-  }
-
-  .chatbot-col-right {
-    flex-direction: column; /* Chuyển thành cột khi trên di động */
-    gap: 1rem;
-  }
-
-  .chatbot-item img {
-    width: 50px;
-    height: 50px;
-  }
-
-  .chatbot-heading {
-    font-size: 1.5rem;
-  }
-
-  .chatbot-label {
-    font-size: 1.25rem;
-  }
 
 /*========HOME=============*/
 .home__container {
@@ -1282,7 +1258,6 @@ img {
   .footer__copy {
     margin-top: 4.5rem;
   }
-  
 }
 
 .section--divider {
@@ -1335,7 +1310,7 @@ img {
 }
 
   
-/* ===================== Phần Chatbot ===================== */
+/*================================CHAT BOT=====================================*/
 .chatbot-section {
   margin-top: 8rem;
   margin-bottom: 3rem;
@@ -1383,10 +1358,11 @@ img {
 }
 
 .chatbot-col-right {
+  flex: 3;
   display: flex;
-  justify-content: space-between; /* Đảm bảo các chatbot xếp hàng ngang */
-  gap: 1.5rem; /* Khoảng cách giữa các phần tử chatbot */
-  flex-wrap: wrap; /* Đảm bảo các mục có thể xuống dòng nếu không đủ không gian */
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
   padding-left: 1rem;
 }
 
@@ -1423,7 +1399,6 @@ img {
   margin-bottom: 2rem;
 }
 
-/* Dark theme styles */
 body.dark-theme {
   background-color: #181818;
   color: #f0f0f0;
