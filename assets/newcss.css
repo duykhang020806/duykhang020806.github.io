@@ -1320,17 +1320,24 @@ img {
 
 .chatbot-box {
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  gap: 2rem;
-  padding: 2rem;
-  background: #fff;
+  background-color: #fff;
   border: 1px solid #ccc;
   border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  padding: 2rem;
   max-width: 1000px;
   margin: 0 auto;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.chatbot-col-left {
+  flex: 1;
+  min-width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .chatbot-label {
@@ -1344,12 +1351,13 @@ img {
   white-space: nowrap;
 }
 
-.chatbot-list {
+.chatbot-col-right {
+  flex: 3;
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
-  flex: 1;
   justify-content: center;
+  gap: 2rem;
+  padding-left: 1rem;
 }
 
 .chatbot-item {
@@ -1364,8 +1372,8 @@ img {
 .chatbot-item img {
   width: 56px;
   height: 56px;
+  margin-bottom: 0.4rem;
   transition: transform 0.3s ease;
-  margin-bottom: 0.5rem;
 }
 
 .chatbot-item span {
@@ -1380,6 +1388,7 @@ img {
 .chatbot-item:hover span {
   color: #007bff;
 }
+
 
 
 
