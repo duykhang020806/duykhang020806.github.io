@@ -156,7 +156,7 @@
   <!-- =======================================================foooter ===============-->
  <div id="footer-placeholder"></div>
 <script>
-  fetch("/assets/footer.html")
+  fetch("../assets/footer.html")
     .then(res => res.text())
     .then(data => {
       document.getElementById("footer-placeholder").innerHTML = data;
