@@ -1381,6 +1381,7 @@ img {
 
 .footer__socials {
   justify-content: center;
+  flex-wrap: nowrap;
 }
 
 
