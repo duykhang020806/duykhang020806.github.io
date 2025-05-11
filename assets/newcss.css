@@ -1346,13 +1346,7 @@ img {
   }
 
 .footer__socials {
-  display: flex;
   justify-content: center;
-  align-items: center;
-  gap: 1.2rem;
-  flex-wrap: wrap;
-  max-width: 240px;   
-  margin-top: 1rem;
 }
 
 
