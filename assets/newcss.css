@@ -1345,13 +1345,16 @@ img {
     column-gap: 2rem;
   }
 
- .footer__socials {
+.footer__socials {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1.5rem;
-  flex-wrap: nowrap; /* 👈 Dòng quan trọng */
+  gap: 1.2rem;
+  flex-wrap: wrap;
+  max-width: 240px;   
+  margin-top: 1rem;
 }
+
 
 
   .footer__copy {
