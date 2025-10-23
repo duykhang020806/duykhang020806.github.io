@@ -655,6 +655,37 @@
   };
   
 </script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  // Đợi player khởi tạo xong
+  const waitForPlayer = setInterval(() => {
+    const player = document.querySelector(".player audio, .player video");
+    if (player) {
+      clearInterval(waitForPlayer);
+
+      // Cho phép phát khi click — không autoplay
+      let userInteracted = false;
+      document.addEventListener("click", () => {
+        userInteracted = true;
+      });
+
+      // Ngăn chặn trình duyệt chặn autoplay
+      player.addEventListener("play", (e) => {
+        if (!userInteracted) {
+          e.preventDefault();
+          player.pause();
+          console.log("⚠️ Browser blocked autoplay, waiting for user click.");
+        }
+      });
+
+      // Giữ chức năng pause / resume như bình thường
+      player.addEventListener("ended", () => {
+        console.log("✅ Track ended");
+      });
+    }
+  }, 300);
+});
+</script>
 
 
 
